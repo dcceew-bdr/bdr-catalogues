@@ -1,0 +1,35 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX schema: <https://schema.org/>
+
+[]    a <https://prez.dev/Manifest> ;
+    prof:hasResource
+        [
+            prof:hasArtifact "background/*.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/IncompleteCatalogueAndResourceLabels> ;
+            schema:description "RDF files containing many labels for the catalogue's content" ;
+            schema:name "Labels" ;
+        ] ,
+        [
+            prof:hasArtifact "master/catalogue.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
+            schema:description "The definition of, and metadata for, the container which here is a catalogue" ;
+            schema:name "Catalogue Definition" ;
+        ] ,
+        [
+            dcterms:conformsTo "master/validators/bdr/items/cats.ttl" ;
+            prof:hasArtifact
+                "master/datasets/catalogue.ttl" ,
+                "master/datasets/obs/catalogue.ttl" ,
+                "master/datasets/ref/catalogue.ttl" ,
+                "master/models/catalogue.ttl" ,
+                "master/models/abis/catalogue.ttl" ,
+                "master/models/bdr/catalogue.ttl" ,
+                "master/validators/catalogue.ttl" ,
+                "master/validators/abis/catalogue.ttl" ,
+                "master/validators/bdr/catalogue.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
+            schema:description "Second & Third level catalogues" ;
+            schema:name "Catalogues" ;
+        ] ;
+.
