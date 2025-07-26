@@ -12,8 +12,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateModified "2025-07-24"^^xsd:date ;
     schema:description "This is a second-level catalogue of the Biodiversity Data Repository containing catalogues of Datasets" ;
     schema:hasPart
-        <https://linked.data.gov.au/dataset/bdr/catalogs/bdr-datasets> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogs/ref-datasets> ;
+        <https://linked.data.gov.au/def/abis/validator> ,
+        <http://www.opengis.net/def/geosparql/validator> ,
+        <https://linked.data.gov.au/def/ontpub/validator> ,
+        <https://linked.data.gov.au/def/sosa-validator> ,
+        # <https://w3id.org/tern/shapes/tern/> ,
+        <https://linked.data.gov.au/def/vocpub/validator> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Validators Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;

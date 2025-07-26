@@ -7,14 +7,11 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "background/*.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/IncompleteCatalogueAndResourceLabels> ;
-            schema:description "RDF files containing many labels for the catalogue's content" ;
-            schema:name "Labels" ;
         ] ,
         [
+            dcterms:conformsTo "master/validators/bdr/items/cats.ttl" ;
             prof:hasArtifact "master/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
-            schema:description "The definition of, and metadata for, the container which here is a catalogue" ;
-            schema:name "Catalogue Definition" ;
         ] ,
         [
             dcterms:conformsTo "master/validators/bdr/items/cats.ttl" ;
@@ -29,7 +26,21 @@ PREFIX schema: <https://schema.org/>
                 "master/validators/abis/catalogue.ttl" ,
                 "master/validators/bdr/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
-            schema:description "Second & Third level catalogues" ;
-            schema:name "Catalogues" ;
+        ] ,
+        [
+            dcterms:conformsTo "master/validators/abis/items/ontpub.ttl" ;
+            prof:hasArtifact
+                "master/models/abis/items/rm.ttl" ,
+                "master/models/abis/items/nsl.ttl" ,
+                # "master/models/abis/items/tern.ttl" ,
+                "master/models/bdr/items/*.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
+        ] ,
+        [
+            dcterms:conformsTo "master/validators/abis/items/shacl.ttl" ;
+            prof:hasArtifact
+                # "master/validators/abis/items/*.ttl" ;
+                "master/validators/bdr/items/*.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ;
 .

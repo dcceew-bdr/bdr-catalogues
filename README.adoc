@@ -1,5 +1,4 @@
 = BDR Catalogues
-:toc: left
 :table-stripes: even
 :sectnums:
 
