@@ -7,11 +7,11 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/brd-pr/sm/1.0> schema:name "1.0" .
+<https://linked.data.gov.au/def/brd-pr/sm/1.1> schema:name "1.1" .
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI <https://linked.data.gov.au/def/brd-pr/sm/2.1> ;
+    owl:versionIRI <https://linked.data.gov.au/def/brd-pr/sm/1.1> ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-pr/"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
@@ -22,6 +22,8 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Submission Manifest Model" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-    schema:version "1.0" ;
-    skos:historyNote "Created by the BDR Team in 2024 with the establishment of the operational Biodiversity Data Repository" ;
+    schema:version "1.1" ;
+    skos:historyNote """1.1 - 2025 Jul - Moved from ABIS to BDR Profile
+
+1.0 - 2025 Mar - First release""" ;
 .

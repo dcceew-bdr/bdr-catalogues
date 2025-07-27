@@ -23,5 +23,7 @@ ont:
     schema:name "Data Release Model" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
     schema:version "1.1" ;
-    skos:historyNote "Created by the BDR Team in 2023 in preparation for the operational Biodiversity Data Repository" ;
+    skos:historyNote """1.1 - 2025 July - Moved from ABIS to BDR Profile, simplification to use schema.org Project
+
+1.0 - 2023 Oct - First release""" ;
 .
