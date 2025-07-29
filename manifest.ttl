@@ -9,38 +9,38 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole <https://prez.dev/ManifestResourceRoles/IncompleteCatalogueAndResourceLabels> ;
         ] ,
         [
-            dcterms:conformsTo "master/validators/bdr/items/cats.ttl" ;
-            prof:hasArtifact "master/catalogue.ttl" ;
+            dcterms:conformsTo "resources/validators/bdr/items/cats.ttl" ;
+            prof:hasArtifact "resources/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
         ] ,
         [
-            dcterms:conformsTo "master/validators/bdr/items/cats.ttl" ;
+            dcterms:conformsTo "resources/validators/bdr/items/cats.ttl" ;
             prof:hasArtifact
-                "master/datasets/catalogue.ttl" ,
-                "master/datasets/obs/catalogue.ttl" ,
-                "master/datasets/ref/catalogue.ttl" ,
-                "master/models/catalogue.ttl" ,
-                "master/models/abis/catalogue.ttl" ,
-                "master/models/bdr/catalogue.ttl" ,
-                "master/validators/catalogue.ttl" ,
-                "master/validators/abis/catalogue.ttl" ,
-                "master/validators/bdr/catalogue.ttl" ;
+                "resources/datasets/catalogue.ttl" ,
+                "resources/datasets/obs/catalogue.ttl" ,
+                "resources/datasets/ref/catalogue.ttl" ,
+                "resources/models/catalogue.ttl" ,
+                "resources/models/abis/catalogue.ttl" ,
+                "resources/models/bdr/catalogue.ttl" ,
+                "resources/validators/catalogue.ttl" ,
+                "resources/validators/abis/catalogue.ttl" ,
+                "resources/validators/bdr/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
-            dcterms:conformsTo "master/validators/abis/items/ontpub.ttl" ;
+            dcterms:conformsTo "resources/validators/abis/items/ontpub.ttl" ;
             prof:hasArtifact
-                "master/models/abis/items/rm.ttl" ,
-                "master/models/abis/items/nsl.ttl" ,
-                # "master/models/abis/items/tern.ttl" ,
-                "master/models/bdr/items/*.ttl" ;
+                "resources/models/abis/items/rm.ttl" ,
+                "resources/models/abis/items/nsl.ttl" ,
+                # "resources/models/abis/items/tern.ttl" ,
+                "resources/models/bdr/items/*.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
-            dcterms:conformsTo "master/validators/abis/items/shacl.ttl" ;
+            dcterms:conformsTo "resources/validators/abis/items/shacl.ttl" ;
             prof:hasArtifact
-                # "master/validators/abis/items/*.ttl" ;
-                "master/validators/bdr/items/*.ttl" ;
+                # "resources/validators/abis/items/*.ttl" ;
+                "resources/validators/bdr/items/*.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ;
 .
