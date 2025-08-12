@@ -10,10 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-07-24"^^xsd:date ;
     schema:dateModified "2025-07-24"^^xsd:date ;
-    schema:description "This is a second-level catalogue of the Biodiversity Data Repository containing catalogues of Datasets" ;
-    schema:hasPart
-        <https://linked.data.gov.au/dataset/bdr/catalogs/bdr-datasets> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogs/ref-datasets> ;
+    schema:description "This is a third-level catalogue of the Biodiversity Data Repository containing reference datasets, that is datasets not created by, or especially for, the BDR, but used by BDR data." ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Reference Datasets Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
