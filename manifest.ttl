@@ -24,7 +24,8 @@ PREFIX schema: <https://schema.org/>
                 "resources/models/bdr/catalogue.ttl" ,
                 "resources/validators/catalogue.ttl" ,
                 "resources/validators/abis/catalogue.ttl" ,
-                "resources/validators/bdr/catalogue.ttl" ;
+                "resources/validators/bdr/catalogue.ttl" ,
+                "resources/vocabularies/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
