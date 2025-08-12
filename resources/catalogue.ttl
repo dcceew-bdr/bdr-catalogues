@@ -2,7 +2,7 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/dataset/bdr/catalogs/bdr>
+<https://linked.data.gov.au/dataset/bdr/catalogues/bdr>
     a schema:DataCatalog ;
     skos:historyNote """2025-07 NJC: Static catalogue created""" ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/" ;
@@ -12,9 +12,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateModified "2025-07-24"^^xsd:date ;
     schema:description "This is the top-level catalogue for the Biodiversity Data Repository and it contains sub-catalogue for each major type of object within the BDR: Datasets. Models, Vocabularies and Validators. See those catalogues for further sub-catalogues" ;
     schema:hasPart
-        <https://linked.data.gov.au/dataset/bdr/catalogs/datasets> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogs/models> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogs/validators> ;
+        <https://linked.data.gov.au/dataset/bdr/catalogues/datasets> ,
+        <https://linked.data.gov.au/dataset/bdr/catalogues/models> ,
+        <https://linked.data.gov.au/dataset/bdr/catalogues/validators> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Master Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
