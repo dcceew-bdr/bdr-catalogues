@@ -13,9 +13,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "This is the top-level catalogue for the Biodiversity Data Repository and it contains sub-catalogue for each major type of object within the BDR: Datasets. Models, Vocabularies and Validators. See those catalogues for further sub-catalogues" ;
     schema:hasPart
         <https://linked.data.gov.au/dataset/bdr/catalogues/datasets> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/vocabularies> ,
         <https://linked.data.gov.au/dataset/bdr/catalogues/models> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/validators> ;
+        <https://linked.data.gov.au/dataset/bdr/catalogues/validators> ,
+        <https://linked.data.gov.au/dataset/bdr/catalogues/vocabularies> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Master Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
