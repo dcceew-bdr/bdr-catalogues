@@ -1,6 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/abis/bdr-profile/validator/>
-PREFIX default1: <https://linked.data.gov.au/def/bdr-pr/dr/validator/>
-PREFIX default2: <https://linked.data.gov.au/def/abis/validator/>
+PREFIX drv: <https://linked.data.gov.au/def/bdr-pr/dr/validator/>
+PREFIX abisv: <https://linked.data.gov.au/def/abis/validator/>
 PREFIX dr: <https://linked.data.gov.au/def/bdr-pr/dr/>
 PREFIX ds: <https://linked.data.gov.au/def/abis/bdr-profile/validator>
 PREFIX ont: <https://linked.data.gov.au/def/abis/validator>
@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ds:
     a owl:Ontology ;
-    owl:versionIRI default1:1.2 ;
+    owl:versionIRI drv:1.2 ;
     owl:versionInfo """1.2 2025-07: Tidy up for inclusion in the BDR Validators Catalogue
 
 1.1 2025-05: Minor updates
@@ -73,7 +73,7 @@ ont:
                 "file://vocpub.ttl" ,
                 "https://w3id.org/profile/vocpub/validator" ;
         ] ;
-    owl:versionIRI default2:1.0 ;
+    owl:versionIRI abisv:1.0 ;
     owl:versionInfo "1.0 First version" ;
     schema:copyrightNotice "(c) 2024 AusBIGG" ;
     schema:creator <https://linked.data.gov.au/org/bdr-team> ;
@@ -81,9 +81,9 @@ ont:
     schema:dateModified "2024-09-23"^^xsd:date ;
     schema:definition "SHACL validator for the Australian Biodiveristy Information Standard, ABIS" ;
     schema:hasPart
-        default2:shape-01 ,
-        default2:shape-02 ,
-        default2:shape-03 ;
+        abisv:shape-01 ,
+        abisv:shape-02 ,
+        abisv:shape-03 ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Validator" ;
     schema:publisher <https://linked.data.gov.au/org/ausbigg> ;
@@ -91,7 +91,7 @@ ont:
 
 dr:validator
     a owl:Ontology ;
-    owl:versionIRI default1:1.0 ;
+    owl:versionIRI drv:1.0 ;
     owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-02-15"^^xsd:date ;
@@ -101,7 +101,7 @@ dr:validator
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
 .
 
-default1:shape-01
+drv:shape-01
     a sh:NodeShape ;
     sh:property
         [
@@ -132,7 +132,7 @@ default1:shape-01
         tern:Dataset ;
 .
 
-default1:shape-02
+drv:shape-02
     a sh:NodeShape ;
     sh:property
         [
@@ -150,7 +150,7 @@ default1:shape-02
         tern:Dataset ;
 .
 
-default1:shape-03
+drv:shape-03
     a sh:NodeShape ;
     sh:property
         [
@@ -178,7 +178,7 @@ default1:shape-03
     sh:targetObjectsOf prov:qualifiedAssociation ;
 .
 
-default1:shape-04
+drv:shape-04
     a sh:NodeShape ;
     sh:property
         [
@@ -192,7 +192,7 @@ default1:shape-04
 
 <https://linked.data.gov.au/def/bdr-pr/proj/validator>
     a owl:Ontology ;
-    owl:versionIRI default1:1.0 ;
+    owl:versionIRI drv:1.0 ;
     owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-04-30"^^xsd:date ;
@@ -253,7 +253,7 @@ default1:shape-04
         schema:Person ;
 .
 
-default2:shape-01
+abisv:shape-01
     a sh:NodeShape ;
     sh:property
         [
@@ -264,11 +264,11 @@ default2:shape-01
     sh:targetClass tern:ObservationCollection ;
 .
 
-default2:shape-02
+abisv:shape-02
     a sh:NodeShape ;
 .
 
-default2:shape-03
+abisv:shape-03
     a sh:NodeShape ;
 .
 
@@ -278,7 +278,7 @@ default2:shape-03
     schema:url "https://github.com/AusBIGG/" ;
 .
 
-default1:1.0
+drv:1.0
     schema:name "1.0" ;
 .
 
