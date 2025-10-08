@@ -11,6 +11,7 @@
 @prefix shsh: <http://www.w3.org/ns/shacl-shacl#> .
 
 shsh:
+    a owl:Ontology ;
 	rdfs:label "SHACL for SHACL"@en ;
 	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
 	sh:declare [

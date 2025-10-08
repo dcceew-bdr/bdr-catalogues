@@ -15,6 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/abis/validator> ,
         <http://www.opengis.net/def/geosparql/validator> ,
         <https://linked.data.gov.au/def/ontpub/validator> ,
+        <http://www.w3.org/ns/shacl-shacl#> ,
         <https://linked.data.gov.au/def/sosa-validator> ,
         # <https://w3id.org/tern/shapes/tern/> ,
         <https://linked.data.gov.au/def/vocpub/validator> ;

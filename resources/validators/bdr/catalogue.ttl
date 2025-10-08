@@ -13,7 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "This is a third-level catalogue of the Biodiversity Data Repository containing BDR model Validators" ;
     schema:hasPart
         <https://linked.data.gov.au/def/abis/bdr-profile/validator> ,
-        <https://linked.data.gov.au/dataset/bdr/validator> ;
+        <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "BDR Validators Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;

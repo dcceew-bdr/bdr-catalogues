@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateModified "2025-07-24"^^xsd:date ;
     schema:description "This is a second-level catalogue of the Biodiversity Data Repository containing catalogues of Datasets" ;
     schema:hasPart
-        <https://linked.data.gov.au/dataset/bdr/catalogues/bdr-datasets> ,
+        <https://linked.data.gov.au/dataset/bdr/catalogues/obs-datasets> ,
         <https://linked.data.gov.au/dataset/bdr/catalogues/ref-datasets> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Datasets Catalogue" ;

@@ -12,8 +12,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateModified "2025-08-12"^^xsd:date ;
     schema:description "This is a third-level catalogue of the Biodiversity Data Repository containing models used in ABIS" ;
     schema:hasPart
-        <https://w3id.org/tern/ontologies/tern> ,
-        <https://linked.data.gov.au/def/abis/rm> ;
+        <https://linked.data.gov.au/def/nsl>
+        <https://linked.data.gov.au/def/abis/rm> ,
+        <https://w3id.org/tern/ontologies/tern> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Models Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;

@@ -13,7 +13,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-<https://linked.data.gov.au/def/bdr-pr/proj/validator>
+<https://linked.data.gov.au/def/bdr-pr/cats/validator>
     a owl:Ontology ;
     owl:versionIRI :1.0 ;
     owl:versionInfo "1.0 First version" ;
