@@ -10,11 +10,6 @@ PREFIX schema: <https://schema.org/>
         ] ,
         [
             dcterms:conformsTo "resources/validators/bdr/items/cats.ttl" ;
-            prof:hasArtifact "resources/catalogue.ttl" ;
-            prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
-        ] ,
-        [
-            dcterms:conformsTo "resources/validators/bdr/items/cats.ttl" ;
             prof:hasArtifact
                 "resources/datasets/catalogue.ttl" ,
                 "resources/datasets/obs/catalogue.ttl" ,
