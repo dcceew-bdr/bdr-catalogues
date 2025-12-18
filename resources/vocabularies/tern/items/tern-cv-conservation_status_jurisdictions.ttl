@@ -1,0 +1,24 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://linked.data.gov.au/def/tern-cv/6ea67eea-c2ae-4240-952a-fdb95b2df8ab> a skos:ConceptScheme;
+  rdfs:label "Conservation Status Jurisdictions"@en;
+  skos:hasTopConcept <http://linked.data.gov.au/def/tern-cv/c7fb8405-3906-4056-a004-b6ce44d018c5>;
+  skos:prefLabel "Conservation Status Jurisdictions"@en;
+  <http://purl.org/dc/terms/created> "2021-05-06T05:13:34"^^xsd:dateTime;
+  <http://purl.org/dc/terms/modified> "2021-11-01T05:07:49"^^xsd:dateTime;
+  <http://purl.org/dc/terms/date> "2021-05-06T05:13:34"^^xsd:dateTime, "2021-11-01T05:07:49"^^xsd:dateTime .
+
+<http://linked.data.gov.au/def/tern-cv/c7fb8405-3906-4056-a004-b6ce44d018c5> a skos:Concept;
+  rdfs:label "Queensland wildlife"@en;
+  skos:definition "TBD";
+  skos:inScheme <http://linked.data.gov.au/def/tern-cv/6ea67eea-c2ae-4240-952a-fdb95b2df8ab>;
+  skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/6ea67eea-c2ae-4240-952a-fdb95b2df8ab>;
+  skos:prefLabel "Queensland wildlife"@en;
+  skos:note "TBD" .

@@ -2,9 +2,9 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/dataset/bdr/catalogues/abis-vocabularies>
+<https://linked.data.gov.au/dataset/bdr/catalogues/abis-cv>
     a schema:DataCatalog ;
-    skos:historyNote """2025-09 NJC: First-pass catalogue created""" ;
+    skos:historyNote "2025-09 NJC: First-pass catalogue created" ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/" ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
@@ -12,14 +12,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateModified "2025-09-15"^^xsd:date ;
     schema:description """This is a third-level catalogue of the Biodiversity Data Repository containing vocabularies relevant to ABIS.
 
-It contains all vocabularies thought relevant to ABIS that are not """ ;
+Many of the vocabularies listed here are also listed in other catalogues on this system, for example, all the vocabularies managed by TERN are listed in the TERN Controlled Vocabularies Catalogue which is a peer catalogue to this one.
+
+This catalogue is still in development as of December 2025 and is expected to ultimately include ABIS-relevant TERN CV vocabs but also alternate Attributes, Categorical Concepts and similar vocabs managed elsewhere than TERN but able to be used in place of their vocabs for non-TERN-relevant data, such as marine data.""" ;
     schema:hasPart
-        <https://linked.data.gov.au/dataset/bdr/catalogues/abis> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/alum> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/asls> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/bdr-cv> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/nrm> ,
-        <https://linked.data.gov.au/dataset/bdr/catalogues/tern-cv> ;
+        <http://linked.data.gov.au/def/tern-cv/6ea67eea-c2ae-4240-952a-fdb95b2df8ab> ,
+        <http://linked.data.gov.au/def/tern-cv/9bf5755a-0ccb-4575-afde-35bf99b8f7b0> ,
+        <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Vocabularies Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
