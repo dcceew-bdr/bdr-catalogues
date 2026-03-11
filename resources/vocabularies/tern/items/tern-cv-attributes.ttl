@@ -31,7 +31,7 @@
   <http://purl.org/dc/terms/date> "2025-10-31T04:24:47"^^xsd:dateTime;
   <http://purl.org/dc/terms/relation> "Neldner, V.J., Wilson, B.A., Dillewaard, H.A., Ryan, T.S., Butler, D.W., McDonald, W.J.F, Addicott, E.P. and Appelman, C.N. (2020) Methodology for survey and mapping of regional ecosystems and vegetation communities in Queensland. Version 5.1. Updated March 2020. Page 70. Queensland Herbarium, Queensland Department of Environment and Science, Brisbane.";
   <http://purl.org/dc/terms/source> "Neldner, V.J., Wilson, B.A., Dillewaard, H.A., Ryan, T.S., Butler, D.W., McDonald, W.J.F, Addicott, E.P. and Appelman, C.N. (2020) Methodology for survey and mapping of regional ecosystems and vegetation communities in Queensland. Version 5.1. Updated March 2020. Page 70. Queensland Herbarium, Queensland Department of Environment and Science, Brisbane.";
-  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> "http://linked.data.gov.au/def/corveg-cv/6886cf26-b5e6-4d59-9d55-5fef8139510e" .
+  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> <http://linked.data.gov.au/def/corveg-cv/6886cf26-b5e6-4d59-9d55-5fef8139510e> .
 
 <http://linked.data.gov.au/def/tern-cv/76806e0f-61a2-447c-8177-7e666637e23a> a skos:Concept;
   rdfs:label "elevation";
@@ -319,7 +319,7 @@
   <http://purl.org/dc/terms/date> "2021-02-01T04:46:51"^^xsd:dateTime, "2025-12-16T00:18:01"^^xsd:dateTime;
   <http://purl.org/dc/terms/relation> "Laws M, McCallum K, Bignall J, Kilpatrick E, O’Neill S, Sparrow B. (2024) Basal Area Module. In ‘Ecological Field Monitoring Protocols Manual using the Ecological Monitoring System Australia’. (Eds S O’Neill, K Irvine, A Tokmakoff, B Sparrow). TERN, Adelaide.";
   <http://purl.org/dc/terms/source> "Laws M, McCallum K, Bignall J, Kilpatrick E, O’Neill S, Sparrow B. (2024) Basal Area Module. In ‘Ecological Field Monitoring Protocols Manual using the Ecological Monitoring System Australia’. (Eds S O’Neill, K Irvine, A Tokmakoff, B Sparrow). TERN, Adelaide.";
-  <https://w3id.org/tern/ontologies/tern/hasMethod> "http://linked.data.gov.au/def/ausplots-cv/872d0b1d-3ed0-4e25-a31a-f3ee4336acc6";
+  <https://w3id.org/tern/ontologies/tern/hasMethod> <http://linked.data.gov.au/def/ausplots-cv/872d0b1d-3ed0-4e25-a31a-f3ee4336acc6>;
   <https://w3id.org/tern/ontologies/tern/hasInstrumentType> <http://linked.data.gov.au/def/tern-cv/8f799772-ddd8-4b61-bf09-83279e1d461d> .
 
 <http://linked.data.gov.au/def/tern-cv/360063cc-4bff-455e-8c8e-9562ff57994f> a skos:Concept;
@@ -1012,7 +1012,7 @@
   <http://purl.org/dc/terms/created> "2021-02-16T04:13:49"^^xsd:dateTime;
   <http://purl.org/dc/terms/modified> "2025-09-12T07:46:24"^^xsd:dateTime;
   <http://purl.org/dc/terms/date> "2021-02-16T04:13:49"^^xsd:dateTime, "2025-09-12T07:46:24"^^xsd:dateTime;
-  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> "https://linked.data.gov.au/def/bdbsa-cv/4a5ede21-4dcd-4c71-834f-cf7f340e4d8e" .
+  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> <https://linked.data.gov.au/def/bdbsa-cv/4a5ede21-4dcd-4c71-834f-cf7f340e4d8e> .
 
 <http://linked.data.gov.au/def/tern-cv/b736e783-39b6-4408-9561-91561aa53a1d> a skos:Concept;
   rdfs:label "source of information"@en;
@@ -1717,7 +1717,7 @@
   <http://purl.org/dc/terms/date> "2025-09-17T05:31:39"^^xsd:dateTime;
   <http://purl.org/dc/terms/relation> "Owens, H (2000) Guidelines for vertebrate surveys in South Australia using the biological survey of South Australia, Department for Environment and Heritage.";
   <http://purl.org/dc/terms/source> "Owens, H (2000) Guidelines for vertebrate surveys in South Australia using the biological survey of South Australia, Department for Environment and Heritage.";
-  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> "https://linked.data.gov.au/def/bdbsa-cv/d1a240da-e41c-4d36-9a3c-c90fa4436904" .
+  <https://w3id.org/tern/ontologies/tern/hasCategoricalCollection> <https://linked.data.gov.au/def/bdbsa-cv/d1a240da-e41c-4d36-9a3c-c90fa4436904> .
 
 <http://linked.data.gov.au/def/tern-cv/1ee2ac9b-b591-4a57-a490-316f9b174ebc> a skos:Concept;
   rdfs:label "bat detector used";
