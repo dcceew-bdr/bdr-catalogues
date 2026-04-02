@@ -773,7 +773,7 @@
   rdfs:label "permanent plot";
   skos:definition "Whether the plot has been placed permanently or not.", "A plot within a survey region that is established for long-term monitoring, where abiotic and biotic properties are repeatedly sampled over time to track changes.";
   skos:inScheme <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924>,
-    <http://linked.data.gov.au/def/tern-cv/74aa68d3-28fd-468d-8ff5-7e791d9f7159>;
+    <http://linked.data.gov.au/def/tern-cv/68af3d25-c801-4089-afff-cf701e2bd61d>;
   skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924>;
   skos:prefLabel "permanent plot";
   skos:note "Whether the plot has been placed permanently or not.", "A plot within a survey region that is established for long-term monitoring, where abiotic and biotic properties are repeatedly sampled over time to track changes.",
@@ -1401,9 +1401,9 @@
   rdfs:label "subplot"@en;
   skos:definition "The plot that is part of the main survey plot.", "A smaller sampling unit established within a larger plot, used to collect more detailed or specific measurements of abiotic or biotic properties. Subplots help capture variability within the main plot and support finer-scale analysis.";
   skos:inScheme <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924>,
-    <http://linked.data.gov.au/def/tern-cv/74aa68d3-28fd-468d-8ff5-7e791d9f7159>;
+    <http://linked.data.gov.au/def/tern-cv/68af3d25-c801-4089-afff-cf701e2bd61d>;
   skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924>,
-    <http://linked.data.gov.au/def/tern-cv/74aa68d3-28fd-468d-8ff5-7e791d9f7159>;
+    <http://linked.data.gov.au/def/tern-cv/68af3d25-c801-4089-afff-cf701e2bd61d>;
   skos:prefLabel "subplot"@en;
   skos:note "The plot that is part of the main survey plot.", "A smaller sampling unit established within a larger plot, used to collect more detailed or specific measurements of abiotic or biotic properties. Subplots help capture variability within the main plot and support finer-scale analysis.",
     "Updated on 10/09/2025: added this concept to Site type scheme, updated the definition so that it fits in both Attribute and Site Type scheme.";

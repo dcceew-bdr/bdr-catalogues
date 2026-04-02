@@ -18,7 +18,8 @@ This catalogue is still in development as of December 2025 and is expected to ul
     schema:hasPart
         <http://linked.data.gov.au/def/tern-cv/6ea67eea-c2ae-4240-952a-fdb95b2df8ab> ,
         <http://linked.data.gov.au/def/tern-cv/9bf5755a-0ccb-4575-afde-35bf99b8f7b0> ,
-        <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924> ;
+        <http://linked.data.gov.au/def/tern-cv/dd085299-ae86-4371-ae15-61dfa432f924> ,
+        <https://linked.data.gov.au/def/abis/vocab-themes> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Vocabularies Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
