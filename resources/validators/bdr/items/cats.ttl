@@ -22,8 +22,8 @@ schema:url "https://www.dcceew.gov.au"^^xsd:anyURI .
     owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-08-01"^^xsd:date ;
-    schema:dateModified "2025-08-15"^^xsd:date ;
-    skos:historyNote "First version released in the Biodiversity Data Repository Validators Catalogue" ; 
+    schema:dateModified "2026-04-2"^^xsd:date ;
+    skos:historyNote "Updated to conform with ValPub validator" ; 
     schema:description "SHACL validator for catalogues used by the Biodiversity Data Repository"@en ;
     schema:name "BDR Catalogues Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
