@@ -10,11 +10,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ont:
     a owl:Ontology ;
     schema:name "ABIS Validator" ;
-    schema:definition "SHACL validator for the Australian Biodiveristy Information Standard, ABIS" ;
+    schema:description "SHACL validator for the Australian Biodiveristy Information Standard, ABIS" ;
     schema:creator <https://linked.data.gov.au/org/bdr-team> ;
     schema:publisher <https://linked.data.gov.au/org/ausbigg> ;
     schema:dateCreated "2022-05-11"^^xsd:date ;
-    schema:dateModified "2024-09-23"^^xsd:date ;
+    schema:dateModified "2026-04-02"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:copyrightNotice "(c) 2024 AusBIGG" ;
     owl:versionIRI :1.0 ;
@@ -57,13 +57,13 @@ ont:
 <https://linked.data.gov.au/org/ausbigg>
     a schema:Organization ;
     schema:name "Australian Biodiversity Information Governance Group" ;
-    schema:url "https://github.com/AusBIGG/" ;
+    schema:url "https://github.com/AusBIGG/"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/bdr-team>
     a schema:Organization ;
     schema:name "BDR Team" ;
-    schema:url "https://bdr.gov.au/" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
 .
 
 :shape-01

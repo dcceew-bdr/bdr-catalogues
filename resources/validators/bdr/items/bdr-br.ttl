@@ -7,6 +7,7 @@ PREFIX ont: <https://linked.data.gov.au/def/abis/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -40,6 +41,8 @@ ds:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "BDR Profile of ABIS Core Validator" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/"^^xsd:anyURI ;
+
 .
 
 :1.2
@@ -79,7 +82,7 @@ ont:
     schema:creator <https://linked.data.gov.au/org/bdr-team> ;
     schema:dateCreated "2022-05-11"^^xsd:date ;
     schema:dateModified "2024-09-23"^^xsd:date ;
-    schema:definition "SHACL validator for the Australian Biodiveristy Information Standard, ABIS" ;
+    schema:description "SHACL validator for the Australian Biodiveristy Information Standard, ABIS" ;
     schema:hasPart
         abisv:shape-01 ,
         abisv:shape-02 ,
@@ -87,6 +90,7 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Validator" ;
     schema:publisher <https://linked.data.gov.au/org/ausbigg> ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/"^^xsd:anyURI ;
 .
 
 dr:validator
@@ -96,9 +100,10 @@ dr:validator
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-02-15"^^xsd:date ;
     schema:dateModified "2025-04-29"^^xsd:date ;
-    schema:definition "SHACL validator for the BDR Data Release Model"@en ;
+    schema:description "SHACL validator for the BDR Data Release Model"@en ;
     schema:name "BDR Data Release Model Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-profile-of-abis/"^^xsd:anyURI ;
 .
 
 drv:shape-01
@@ -130,6 +135,7 @@ drv:shape-01
     sh:targetClass
         schema:Project ,
         tern:Dataset ;
+rdfs:isDefinedBy dr: ;
 .
 
 drv:shape-02
@@ -148,6 +154,7 @@ drv:shape-02
     sh:targetClass
         schema:Project ,
         tern:Dataset ;
+    rdfs:isDefinedBy dr: ;
 .
 
 drv:shape-03
@@ -176,6 +183,7 @@ drv:shape-03
         ] ;
     sh:targetClass schema:Project ;
     sh:targetObjectsOf prov:qualifiedAssociation ;
+    rdfs:isDefinedBy dr: ;
 .
 
 drv:shape-04
@@ -188,6 +196,7 @@ drv:shape-04
             sh:path prov:role ;
         ] ;
     sh:targetObjectsOf prov:qualifiedAssociation ;
+rdfs:isDefinedBy dr: ;
 .
 
 <https://linked.data.gov.au/def/bdr-pr/proj/validator>
@@ -197,9 +206,10 @@ drv:shape-04
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-04-30"^^xsd:date ;
     schema:dateModified "2025-04-30"^^xsd:date ;
-    schema:definition "SHACL validator for the BDR Project Model"@en ;
+    schema:description "SHACL validator for the BDR Project Model"@en ;
     schema:name "BDR Data Release Model Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-profile-of-abis"^^xsd:anyURI ;
 .
 
 :shape-01
@@ -207,6 +217,8 @@ drv:shape-04
     sh:message "Dataset IRIs must match the BDR Profile of ABIS' proscribed pattern of https://linked.data.gov.au/dataset/bdr/{UUID}" ;
     sh:pattern "^https://linked\\.data\\.gov\\.au/dataset/bdr/[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$" ;
     sh:targetClass tern:Dataset ;
+    schema:name "Dataset IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-02
@@ -214,6 +226,8 @@ drv:shape-04
     sh:message "Site IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
     sh:pattern "linked\\.data\\.gov\\.au" ;
     sh:targetClass tern:Site ;
+    schema:name "Site IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-03
@@ -221,6 +235,8 @@ drv:shape-04
     sh:message "Survey IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
     sh:pattern "linked\\.data\\.gov\\.au" ;
     sh:targetClass tern:Survey ;
+    schema:name "Survey IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-04
@@ -228,6 +244,8 @@ drv:shape-04
     sh:message "SiteVisit IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
     sh:pattern "linked\\.data\\.gov\\.au" ;
     sh:targetClass tern:SiteVisit ;
+    schema:name "Site Visit IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-05
@@ -235,6 +253,8 @@ drv:shape-04
     sh:message "Sample IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
     sh:pattern "linked\\.data\\.gov\\.au" ;
     sh:targetClass tern:Sample ;
+    schema:name "Sample IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-06
@@ -242,6 +262,8 @@ drv:shape-04
     sh:message "Observation IRIs must match the BDR Profile of ABIS' proscribed pattern pattern of https://linked.data.gov.au/dataset/bdr/{UUID}/ + supplier pattern" ;
     sh:pattern "^https://linked\\.data\\.gov\\.au/dataset/bdr/[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}/.+" ;
     sh:targetClass tern:Observation ;
+    schema:name "Observation IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 :shape-07
@@ -251,6 +273,8 @@ drv:shape-04
     sh:targetClass
         schema:Organization ,
         schema:Person ;
+    schema:name "Agent IRI Pattern" ;
+    rdfs:isDefinedBy ds: ;
 .
 
 abisv:shape-01
@@ -262,14 +286,18 @@ abisv:shape-01
             sh:path sosa:hasMember ;
         ] ;
     sh:targetClass tern:ObservationCollection ;
+    rdfs:isDefinedBy abisv: ;
+    prov:wasDerivedFrom abisv:shape-01 ;
 .
 
 abisv:shape-02
     a sh:NodeShape ;
+    rdfs:isDefinedBy abisv: ;
 .
 
 abisv:shape-03
     a sh:NodeShape ;
+    rdfs:isDefinedBy abisv: ;
 .
 
 <https://linked.data.gov.au/org/ausbigg>
@@ -282,10 +310,16 @@ drv:1.0
     schema:name "1.0" ;
 .
 
+<https://linked.data.gov.au/org/ausbigg>
+    a schema:Organization ;
+    schema:name "Australian Biodiversity Information Governance Group" ;
+    schema:url "https://github.com/AusBIGG/"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/bdr-team>
     a schema:Organization ;
     schema:name "BDR Team" ;
-    schema:url "https://bdr.gov.au/" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/dcceew>
