@@ -19,8 +19,9 @@ BASE <https://linked.data.gov.au/def/vocpub/validator/>
     schema:definition "SHACL validator for the VocPub Profile"@en ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:codeRepository "https://github.com/AGLDWG/vocpub-profile"^^xsd:anyURI ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2025-07-21"^^xsd:date ;
+    schema:dateModified "2026-04-07"^^xsd:date ;
     owl:versionIRI <https://linked.data.gov.au/def/vocpub/validator/5.2> ;
     owl:versionInfo """5.2 Implement Shape 2.1.2+3 using qualified shape pattern as this is supported by pySHACL
 
