@@ -2,6 +2,7 @@ PREFIX : <https://linked.data.gov.au/def/sosa-validator/>
 PREFIX ont: <https://linked.data.gov.au/def/sosa-validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#> 
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
@@ -30,21 +31,31 @@ Not that this is not an official SOSA validator, only a part-validator for eleme
 <https://linked.data.gov.au/org/ausbigg>
     a schema:Organization ;
     schema:name "Australian Biodiversity Information Governance Group" ;
-    schema:url "https://github.com/AusBIGG/" ;
+    schema:url "https://github.com/AusBIGG/"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/bdr-team>
     a schema:Organization ;
     schema:name "BDR Team" ;
-    schema:url "https://bdr.gov.au/" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
 .
 
 :shape-01
     a sh:NodeShape ;
     sh:targetSubjectsOf sosa:usedProcedure ;
-    sh:property [
-        a sh:PropertyShape ;
-        sh:path sosa:usedProcedure ;
-        sh:nodeKind sh:IRI ;
-    ] ;
+    sh:property :shape-01-property-01 ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Use Procedure IRIs" ;
+    schema:description "Checks that data using sosa:usedProcedure uses IRI values." ;
+.
+
+:shape-01-property-01
+    a sh:PropertyShape ;
+    sh:path sosa:usedProcedure ;
+    sh:nodeKind sh:IRI ;
+    sh:message "Values of sosa:usedProcedure MUST be IRIs" ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "usedProcedure value is IRI" ;
+    schema:description "Checks that each value of sosa:usedProcedure is an IRI." ;
+    prov:wasDerivedFrom :shape-01 ;
 .

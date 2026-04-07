@@ -28,7 +28,7 @@ ds:
     schema:copyrightNotice "(c) 2025 DCCEES" ;
     schema:creator <https://linked.data.gov.au/org/bdr-team> ;
     schema:dateCreated "2022-05-11"^^xsd:date ;
-    schema:dateModified "2024-09-23"^^xsd:date ;
+    schema:dateModified "2026-04-07"^^xsd:date ;
     schema:description "SHACL validator for the Biodiversity Data Repository (BDR)'s profile of Australian Biodiversity Information Standard (ABIS)" ;
     schema:hasPart
         :shape-01 ,
