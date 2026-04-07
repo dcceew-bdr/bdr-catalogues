@@ -40,6 +40,8 @@ tern-shapes:
         tern: ;
     owl:versionIRI tern-shapes:0.8.0 ;
     owl:versionInfo "0.8.0" ;
+    sdo:dateModified "2026-04-07"^^xsd:date ;
+    sdo:codeRepository "https://github.com/ternaustralia/ontology_tern"^^xsd:anyURI ;
 .
 
 tern-shapes:Association
