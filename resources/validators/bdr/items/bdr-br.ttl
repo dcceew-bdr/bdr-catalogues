@@ -39,6 +39,7 @@ ds:
         :shape-06 ,
         :shape-07 ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
     schema:name "BDR Profile of ABIS Core Validator" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/"^^xsd:anyURI ;
@@ -88,9 +89,11 @@ ont:
         abisv:shape-02 ,
         abisv:shape-03 ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
     schema:name "ABIS Validator" ;
     schema:publisher <https://linked.data.gov.au/org/ausbigg> ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/"^^xsd:anyURI ;
+    prov:wasDerivedFrom ont: ;
 .
 
 dr:validator
@@ -103,7 +106,10 @@ dr:validator
     schema:description "SHACL validator for the BDR Data Release Model"@en ;
     schema:name "BDR Data Release Model Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-profile-of-abis/"^^xsd:anyURI ;
+
 .
 
 drv:shape-01
@@ -136,6 +142,9 @@ drv:shape-01
         schema:Project ,
         tern:Dataset ;
 rdfs:isDefinedBy dr: ;
+prov:wasDerivedFrom drv:shape-01 ;
+schema:name "Dataset embargoed date values and Project has part Project" ; 
+schema:description "Datasets using embargoedUntil date values and Project hasPart Project" ; 
 .
 
 drv:shape-02
@@ -143,18 +152,21 @@ drv:shape-02
     sh:property
         [
             sh:class time:DurationDescription ;
-            sh:message "A Dataset that uses an embargo period predicate must use it to indicate an instance of the class time:DurationDescription from OWL Time" ;
+            sh:message "A Dataset that uses an embargo period predicate MUST use it to indicate an instance of the class time:DurationDescription from OWL Time" ;
             sh:path dr:embargoPeriod ;
         ] ,
         [
             sh:class schema:Project ;
-            sh:message "If a Project is indicated as having a part, the other thing must also be a Project" ;
+            sh:message "If a Project is indicated as having a part, the other thing MUST also be a Project" ;
             sh:path schema:hasPart ;
         ] ;
     sh:targetClass
         schema:Project ,
         tern:Dataset ;
     rdfs:isDefinedBy dr: ;
+    prov:wasDerivedFrom drv:shape-02 ;
+    schema:name "Dataset embargoe indicates OWL Time and Project has part Project" ; 
+    schema:description "Dataset embargoe period indicates DurationDescription from OWL Time and Project hasPart Project" ; 
 .
 
 drv:shape-03
@@ -162,12 +174,12 @@ drv:shape-03
     sh:property
         [
             sh:class tern:Dataset ;
-            sh:message "If a Project is indicated as having generated something, that thing must be a tern:Dataset" ;
+            sh:message "If a Project is indicated as having generated something, that thing MUST be a tern:Dataset" ;
             sh:path prov:generated ;
         ] ,
         [
             sh:maxCount 1 ;
-            sh:message "If a Project indicate a qualified association, the indicated object must further indicate an Agent (Person or Organisation) with the prov:agent predicate" ;
+            sh:message "If a Project indicate a qualified association, the indicated object MUST further indicate an Agent (Person or Organisation) with the prov:agent predicate" ;
             sh:minCount 1 ;
             sh:or (
 
@@ -184,6 +196,9 @@ drv:shape-03
     sh:targetClass schema:Project ;
     sh:targetObjectsOf prov:qualifiedAssociation ;
     rdfs:isDefinedBy dr: ;
+    prov:wasDerivedFrom drv:shape-03 ;
+    schema:name "Project generates Dataset and Project indicates associated Agent" ;
+    schema:description "Project-generated datasets with qualified assocition indicating Agent with prov:Agent" ; 
 .
 
 drv:shape-04
@@ -196,7 +211,10 @@ drv:shape-04
             sh:path prov:role ;
         ] ;
     sh:targetObjectsOf prov:qualifiedAssociation ;
-rdfs:isDefinedBy dr: ;
+    rdfs:isDefinedBy dr: ;
+    prov:wasDerivedFrom drv:shape-04 ;
+    schema:name "Project indicates association with Role" ;
+    schema:description "Project indicating qualified association indicates role with prov:Agent" ; 
 .
 
 <https://linked.data.gov.au/def/bdr-pr/proj/validator>
@@ -209,7 +227,10 @@ rdfs:isDefinedBy dr: ;
     schema:description "SHACL validator for the BDR Project Model"@en ;
     schema:name "BDR Data Release Model Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-profile-of-abis"^^xsd:anyURI ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/bdr-pr/proj/validator> ;
 .
 
 :shape-01
@@ -286,24 +307,22 @@ abisv:shape-01
             sh:path sosa:hasMember ;
         ] ;
     sh:targetClass tern:ObservationCollection ;
+    sh:message "The Observation Collection has less than one member Observation" ;
     rdfs:isDefinedBy abisv: ;
     prov:wasDerivedFrom abisv:shape-01 ;
+    schema:name "Observation Collection members" ; 
 .
 
 abisv:shape-02
     a sh:NodeShape ;
     rdfs:isDefinedBy abisv: ;
+    prov:wasDerivedFrom abisv:shape-02 ;    
 .
 
 abisv:shape-03
     a sh:NodeShape ;
     rdfs:isDefinedBy abisv: ;
-.
-
-<https://linked.data.gov.au/org/ausbigg>
-    a schema:Organization ;
-    schema:name "Australian Biodiversity Information Governance Group" ;
-    schema:url "https://github.com/AusBIGG/" ;
+    prov:wasDerivedFrom abisv:shape-03 ;
 .
 
 drv:1.0
