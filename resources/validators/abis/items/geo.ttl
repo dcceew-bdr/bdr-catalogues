@@ -23,7 +23,8 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 	] ;
 	dcterms:creator "OGC GeoSPARQL Standards Working Group" ;
 	dcterms:created "2021-06-13"^^xsd:date ;
-	dcterms:modified "2022-03-10"^^xsd:date ;
+	dcterms:modified "2026-04-07"^^xsd:date ;
+	sdo:codeRepository "https://github.com/opengeospatial/ogc-geosparql"^^xsd:anyURI ;
     dcterms:license "https://www.ogc.org/license"^^xsd:anyURI ;
 	dcterms:rights "(c) 2022 Open Geospatial Consortium" ;
 	owl:versionInfo "OGC GeoSPARQL 1.1" ;
