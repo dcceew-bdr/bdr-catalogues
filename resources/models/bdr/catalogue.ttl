@@ -9,9 +9,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-07-24"^^xsd:date ;
-    schema:dateModified "2025-08-12"^^xsd:date ;
+    schema:dateModified "2026-04-08"^^xsd:date ;
     schema:description "This is a third-level catalogue of the Biodiversity Data Repository containing models used in the BDR Profile of ABIS" ;
     schema:hasPart
+        <https://linked.data.gov.au/def/abis/brm> ,
         <https://linked.data.gov.au/def/bdr-pr/dr> ,
         <https://linked.data.gov.au/def/bdr-pr/proj> ,
         <https://linked.data.gov.au/def/bdr-pr/sm> ;
