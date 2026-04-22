@@ -71,11 +71,11 @@ ont:
             schema:url "file://tern.ttl" ;
         ] ,
         [
-            schema:identifier "https://w3id.org/profile/vocpub/validator" ;
+            schema:identifier "https://linked.data.gov.au/def/vocpub/validator" ;
             schema:name "VocPub" ;
             schema:url
                 "file://vocpub.ttl" ,
-                "https://w3id.org/profile/vocpub/validator" ;
+                "https://linked.data.gov.au/def/vocpub/validator" ;
         ] ;
     owl:versionIRI abisv:1.0 ;
     owl:versionInfo "1.0 First version" ;
