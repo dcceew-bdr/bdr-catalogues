@@ -50,6 +50,10 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
         ] ,
         [
+            prof:hasArtifact "resources/vocabularies/abis/items/*.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
+        ] ;
+        [
             prof:hasArtifact "resources/vocabularies/tern/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
         ] ,
