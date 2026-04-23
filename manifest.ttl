@@ -22,6 +22,7 @@ PREFIX schema: <https://schema.org/>
                 "resources/validators/bdr/catalogue.ttl" ,
                 "resources/vocabularies/catalogue.ttl" ,
                 "resources/vocabularies/abis/catalogue.ttl" ,
+                "resources/vocabularies/bdr/catalogue.ttl" ,
                 "resources/vocabularies/tern/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
