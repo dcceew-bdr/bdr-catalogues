@@ -20,8 +20,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ds:
     a owl:Ontology ;
-    owl:versionIRI :1.2 ;
-    owl:versionInfo """1.2 2025-07: Tidy up for inclusion in the BDR Validators Catalogue
+    owl:versionIRI :1.3 ;
+    owl:versionInfo """1.3 2026-04: Removed additional owl:Ontology blocks - imported shapes are indicated by rdfs:isDefinedBy ; removed undefined shapes abisv:shape-02, abisv:shape-03 ; other fixes to bring up to ValPub compliance.
+    
+1.2 2025-07: Tidy up for inclusion in the BDR Validators Catalogue
 
 1.1 2025-05: Minor updates
 
@@ -30,7 +32,7 @@ ds:
     schema:copyrightNotice "(c) 2025 DCCEEW" ;
     schema:creator <https://linked.data.gov.au/org/bdr-team> ;
     schema:dateCreated "2022-05-11"^^xsd:date ;
-    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:dateModified "2026-04-26"^^xsd:date ;
     owl:imports
         <https://linked.data.gov.au/def/abis/validator> ,
         <https://linked.data.gov.au/def/bdr-pr/dr/validator> ,
