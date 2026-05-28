@@ -3587,8 +3587,13 @@ tern-shapes: a owl:Ontology ;
     owl:versionIRI tern-shapes:0.8.0 ;
     owl:versionInfo "0.8.0" ;
     schema:codeRepository "https://github.com/ternaustralia/ontology_tern"^^xsd:anyURI ;
-    schema:dateModified "2026-05-27"^^xsd:date ;
-    schema:hasPart tern-shapes:Association,
+    skos:historyNote "2026-05-28: BDR-maintained version updated for ValPub conformance. Non-structural metadata added, including rdfs:isDefinedBy, schema:hasPart, schema:name and schema:description. No validation constraints were intentionally changed." ;
+    schema:dateModified "2026-05-28"^^xsd:date ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:maintainer <https://linked.data.gov.au/org/dcceew> ;
+    schema:hasPart 
+        tern-shapes:Association,
         tern-shapes:Association-agent,
         tern-shapes:Association-hadPlan,
         tern-shapes:Association-hadRole,
