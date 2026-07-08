@@ -1,25 +1,25 @@
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
-PREFIX geo: <http://www.opengis.net/ont/geosparql#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX qudt: <http://qudt.org/schema/qudt/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
-PREFIX schema: <https://schema.org/>
-PREFIX sf: <http://www.opengis.net/ont/sf#>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX sosa: <http://www.w3.org/ns/sosa/>
-PREFIX ssn: <http://www.w3.org/ns/ssn/>
-PREFIX ssn-system: <http://www.w3.org/ns/ssn/systems/>
-PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-PREFIX tern-shapes: <https://w3id.org/tern/shapes/tern/>
-PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX void: <http://rdfs.org/ns/void#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix schema: <https://schema.org/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix tern-shapes: <https://w3id.org/tern/shapes/tern/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 tern-shapes:Association a sh:NodeShape ;
     rdfs:label "Association" ;
@@ -84,16 +84,13 @@ tern-shapes:Dataset a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "dataset distribution" ;
             sh:class tern:Distribution ;
             sh:description "An available distribution of the dataset." ;
             sh:message "A `tern:Dataset` _MAY_ have a `dcat:distribution` predicate with a value of type `tern:Distribution`." ;
             sh:name "dcat:distribution" ;
             sh:nodeKind sh:IRI ;
-            sh:path dcat:distribution ;
-            schema:description "An available distribution of the dataset." ;
-            schema:name "dcat:distribution" ] ;
+            sh:path dcat:distribution ] ;
     schema:description "Node shape that groups property shapes associated with Dataset." ;
     schema:name "Dataset" .
 
@@ -130,72 +127,54 @@ tern-shapes:DigitalCamera a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera alternative label" ;
             sh:datatype xsd:string ;
             sh:description "Alternative labels for the digital camera." ;
             sh:message "If present, `skos:altLabel` predicates on a `tern:DigitalCamera` _MUST_ have string values." ;
             sh:name "skos:altLabel" ;
-            sh:path skos:altLabel ;
-            schema:description "Alternative labels for the digital camera." ;
-            schema:name "skos:altLabel" ],
+            sh:path skos:altLabel ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera model" ;
             sh:description "The model as defined by the manufacturer." ;
             sh:message "A `tern:DigitalCamera` _MUST_ have at least 1 `schema:model` predicate." ;
             sh:minCount 1 ;
             sh:name "schema:model" ;
-            sh:path <http://schema.org/model> ;
-            schema:description "The model as defined by the manufacturer." ;
-            schema:name "schema:model" ],
+            sh:path <http://schema.org/model> ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera definition" ;
             sh:datatype xsd:string ;
             sh:description "The definition of the digital camera." ;
             sh:message "If present, `skos:definition` predicates on a `tern:DigitalCamera` _MUST_ have string values." ;
             sh:name "skos:definition" ;
-            sh:path skos:definition ;
-            schema:description "The definition of the digital camera." ;
-            schema:name "skos:definition" ],
+            sh:path skos:definition ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera source" ;
             sh:datatype xsd:string ;
             sh:description "The source of information about the digital camera." ;
             sh:message "A `tern:DigitalCamera` _MUST_ have at least 1 `dcterms:source` predicate with a string value." ;
             sh:minCount 1 ;
             sh:name "dcterms:source" ;
-            sh:path dcterms:source ;
-            schema:description "The source of information about the digital camera." ;
-            schema:name "dcterms:source" ],
+            sh:path dcterms:source ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera manufacturer" ;
             sh:datatype xsd:string ;
             sh:description "The manufacturer of the digital camera." ;
             sh:message "A `tern:DigitalCamera` _MUST_ have at least 1 `schema:manufacturer` predicate with a string value." ;
             sh:minCount 1 ;
             sh:name "schema:manufacturer" ;
-            sh:path <http://schema.org/manufacturer> ;
-            schema:description "The manufacturer of the digital camera." ;
-            schema:name "schema:manufacturer" ],
+            sh:path <http://schema.org/manufacturer> ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "digital camera preferred label" ;
             sh:description "The preferred label for the digital camera." ;
             sh:message "A `tern:DigitalCamera` _MUST_ have at least 1 `skos:prefLabel` predicate." ;
             sh:minCount 1 ;
             sh:name "skos:prefLabel" ;
-            sh:path skos:prefLabel ;
-            schema:description "The preferred label for the digital camera." ;
-            schema:name "skos:prefLabel" ] ;
+            sh:path skos:prefLabel ] ;
     sh:targetClass tern:DigitalCamera ;
     schema:description "Node shape that targets instances of tern:DigitalCamera and groups the property shapes associated with that class." ;
     schema:name "Digital Camera" .
@@ -206,33 +185,6 @@ tern-shapes:Dimension a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
-            skos:prefLabel "dimension unit" ;
-            sh:class qudt:Unit ;
-            sh:description "The unit of measurement for the dimensions." ;
-            sh:maxCount 1 ;
-            sh:message "A `tern:Dimension` _MUST_ have exactly 1 `tern:unit` predicate with a value of type `qudt:Unit`." ;
-            sh:minCount 1 ;
-            sh:name "tern:unit" ;
-            sh:path tern:unit ;
-            schema:description "The unit of measurement for the dimensions." ;
-            schema:name "tern:unit" ],
-        [ a sh:PropertyShape ;
-            reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
-            skos:prefLabel "diemnsion width" ;
-            sh:description "The width dimension." ;
-            sh:maxCount 1 ;
-            sh:message "A `tern:Dimension` _MUST_ have exactly 1 `tern:width` predicate with a double or integer value." ;
-            sh:minCount 1 ;
-            sh:name "tern:width" ;
-            sh:or ( [ sh:datatype xsd:double ] [ sh:datatype xsd:integer ] ) ;
-            sh:path tern:width ;
-            schema:description "The width dimension." ;
-            schema:name "tern:width" ],
-        [ a sh:PropertyShape ;
-            reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "dimension length" ;
             sh:description "The length dimension." ;
             sh:maxCount 1 ;
@@ -240,9 +192,27 @@ tern-shapes:Dimension a sh:NodeShape ;
             sh:minCount 1 ;
             sh:name "tern:length" ;
             sh:or ( [ sh:datatype xsd:double ] [ sh:datatype xsd:integer ] ) ;
-            sh:path tern:length ;
-            schema:description "The length dimension." ;
-            schema:name "tern:length" ] ;
+            sh:path tern:length ],
+        [ a sh:PropertyShape ;
+            reg:status reg:statusExperimental ;
+            skos:prefLabel "dimension unit" ;
+            sh:class qudt:Unit ;
+            sh:description "The unit of measurement for the dimensions." ;
+            sh:maxCount 1 ;
+            sh:message "A `tern:Dimension` _MUST_ have exactly 1 `tern:unit` predicate with a value of type `qudt:Unit`." ;
+            sh:minCount 1 ;
+            sh:name "tern:unit" ;
+            sh:path tern:unit ],
+        [ a sh:PropertyShape ;
+            reg:status reg:statusExperimental ;
+            skos:prefLabel "diemnsion width" ;
+            sh:description "The width dimension." ;
+            sh:maxCount 1 ;
+            sh:message "A `tern:Dimension` _MUST_ have exactly 1 `tern:width` predicate with a double or integer value." ;
+            sh:minCount 1 ;
+            sh:name "tern:width" ;
+            sh:or ( [ sh:datatype xsd:double ] [ sh:datatype xsd:integer ] ) ;
+            sh:path tern:width ] ;
     sh:targetClass tern:Dimension ;
     schema:description "Node shape that targets instances of tern:Dimension and groups the property shapes associated with that class." ;
     schema:name "Dimension" .
@@ -298,77 +268,58 @@ tern-shapes:FluxTower a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower comment" ;
             sh:datatype xsd:string ;
             sh:description "Comments about the flux tower." ;
             sh:message "If present, `rdfs:comment` predicates on a `tern:FluxTower` _MUST_ have string values." ;
             sh:name "rdfs:comment" ;
-            sh:path rdfs:comment ;
-            schema:description "Comments about the flux tower." ;
-            schema:name "rdfs:comment" ],
+            sh:path rdfs:comment ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower IGBP code" ;
             sh:datatype xsd:string ;
             sh:description "The IGBP code of the flux tower." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `tern:igbpCode` predicate with a string value." ;
             sh:name "tern:igbpCode" ;
-            sh:path tern:igbpCode ;
-            schema:description "The IGBP code of the flux tower." ;
-            schema:name "tern:igbpCode" ],
+            sh:path tern:igbpCode ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower description" ;
             sh:datatype xsd:string ;
             sh:description "The description of the flux tower." ;
             sh:message "If present, `dcterms:description` predicates on a `tern:FluxTower` _MUST_ have string values." ;
             sh:name "dcterms:description" ;
-            sh:path dcterms:description ;
-            schema:description "The description of the flux tower." ;
-            schema:name "dcterms:description" ],
+            sh:path dcterms:description ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "decommissioned date of flux tower" ;
             sh:datatype xsd:date ;
             sh:description "The date when the flux tower was decommissioned." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `tern:dateDecommissioned` predicate with a date value." ;
             sh:name "tern:dateDecommissioned" ;
-            sh:path tern:dateDecommissioned ;
-            schema:description "The date when the flux tower was decommissioned." ;
-            schema:name "tern:dateDecommissioned" ],
+            sh:path tern:dateDecommissioned ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower purpose" ;
             sh:datatype xsd:string ;
             sh:description "The purpose of the flux tower." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `tern:purpose` predicate with a string value." ;
             sh:name "tern:purpose" ;
-            sh:path tern:purpose ;
-            schema:description "The purpose of the flux tower." ;
-            schema:name "tern:purpose" ],
+            sh:path tern:purpose ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower fluxnet ID" ;
             sh:datatype xsd:string ;
             sh:description "The FLUXNET ID of the flux tower." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `tern:fluxnetID` predicate with a string value." ;
             sh:name "tern:fluxnetID" ;
-            sh:path tern:fluxnetID ;
-            schema:description "The FLUXNET ID of the flux tower." ;
-            schema:name "tern:fluxnetID" ],
+            sh:path tern:fluxnetID ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower centroid point" ;
             sh:class sf:Point ;
             sh:description "The centroid point of the flux tower." ;
@@ -376,36 +327,27 @@ tern-shapes:FluxTower a sh:NodeShape ;
             sh:message "A `tern:FluxTower` _MUST_ have exactly 1 `tern:centroidPoint` predicate with a value of type `sf:Point`." ;
             sh:minCount 1 ;
             sh:name "tern:centroidPoint" ;
-            sh:path tern:centroidPoint ;
-            schema:description "The centroid point of the flux tower." ;
-            schema:name "tern:centroidPoint" ],
+            sh:path tern:centroidPoint ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower is hosted by" ;
             sh:class tern:Site ;
             sh:description "The site that hosts the flux tower." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `sosa:isHostedBy` predicate with a value of type `tern:Site`." ;
             sh:name "sosa:isHostedBy" ;
-            sh:path sosa:isHostedBy ;
-            schema:description "The site that hosts the flux tower." ;
-            schema:name "sosa:isHostedBy" ],
+            sh:path sosa:isHostedBy ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower ozflux ID" ;
             sh:datatype xsd:string ;
             sh:description "The OzFlux ID of the flux tower." ;
             sh:maxCount 1 ;
             sh:message "A `tern:FluxTower` _MAY_ have at most 1 `tern:ozfluxID` predicate with a string value." ;
             sh:name "tern:ozfluxID" ;
-            sh:path tern:ozfluxID ;
-            schema:description "The OzFlux ID of the flux tower." ;
-            schema:name "tern:ozfluxID" ],
+            sh:path tern:ozfluxID ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "commissioned date of flux tower" ;
             sh:datatype xsd:date ;
             sh:description "The date when the flux tower was commissioned." ;
@@ -413,12 +355,9 @@ tern-shapes:FluxTower a sh:NodeShape ;
             sh:message "A `tern:FluxTower` _MUST_ have exactly 1 `tern:dateCommissioned` predicate with a date value." ;
             sh:minCount 1 ;
             sh:name "tern:dateCommissioned" ;
-            sh:path tern:dateCommissioned ;
-            schema:description "The date when the flux tower was commissioned." ;
-            schema:name "tern:dateCommissioned" ],
+            sh:path tern:dateCommissioned ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "flux tower label" ;
             sh:datatype xsd:string ;
             sh:description "The label of the flux tower." ;
@@ -426,9 +365,7 @@ tern-shapes:FluxTower a sh:NodeShape ;
             sh:message "A `tern:FluxTower` _MUST_ have exactly 1 `rdfs:label` predicate with a string value." ;
             sh:minCount 1 ;
             sh:name "rdfs:label" ;
-            sh:path rdfs:label ;
-            schema:description "The label of the flux tower." ;
-            schema:name "rdfs:label" ] ;
+            sh:path rdfs:label ] ;
     sh:targetClass tern:FluxTower ;
     schema:description "Node shape that targets instances of tern:FluxTower and groups the property shapes associated with that class." ;
     schema:name "Flux Tower" .
@@ -461,18 +398,14 @@ tern-shapes:Input a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "input description" ;
             sh:datatype xsd:string ;
             sh:description "The description of the input." ;
             sh:message "If present, `dcterms:description` predicates on a `tern:Input` _MUST_ have string values." ;
             sh:name "dcterms:description" ;
-            sh:path dcterms:description ;
-            schema:description "The description of the input." ;
-            schema:name "dcterms:description" ],
+            sh:path dcterms:description ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "input label" ;
             sh:datatype xsd:string ;
             sh:description "The label of the input." ;
@@ -480,20 +413,15 @@ tern-shapes:Input a sh:NodeShape ;
             sh:message "A `tern:Input` _MUST_ have exactly 1 `rdfs:label` predicate with a string value." ;
             sh:minCount 1 ;
             sh:name "rdfs:label" ;
-            sh:path rdfs:label ;
-            schema:description "The label of the input." ;
-            schema:name "rdfs:label" ],
+            sh:path rdfs:label ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "input value" ;
             sh:description "The value of the input." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Input` _MAY_ have at most 1 `rdf:value` predicate." ;
             sh:name "rdf:value" ;
-            sh:path rdf:value ;
-            schema:description "The value of the input." ;
-            schema:name "rdf:value" ],
+            sh:path rdf:value ],
         tern-shapes:tern-hasAttribute,
         tern-shapes:void-inDataset ;
     sh:targetClass tern:Input ;
@@ -597,30 +525,23 @@ tern-shapes:Method a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method scope" ;
             sh:datatype xsd:string ;
             sh:description "The scope of the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `tern:scope` predicate with a string value." ;
             sh:name "tern:scope" ;
-            sh:path tern:scope ;
-            schema:description "The scope of the method." ;
-            schema:name "tern:scope" ],
+            sh:path tern:scope ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "parameter of method" ;
             sh:class skos:Concept ;
             sh:description "The parameters of the method." ;
             sh:message "If present, `tern:hasParameter` predicates on a `tern:Method` _MUST_ have values of type `skos:Concept`." ;
             sh:name "tern:hasParameter" ;
-            sh:path tern:hasParameter ;
-            schema:description "The parameters of the method." ;
-            schema:name "tern:hasParameter" ],
+            sh:path tern:hasParameter ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method preferred label" ;
             sh:datatype xsd:string ;
             sh:description "The preferred label of the method." ;
@@ -628,102 +549,76 @@ tern-shapes:Method a sh:NodeShape ;
             sh:message "A `tern:Method` _MUST_ have exactly 1 `skos:prefLabel` predicate with a string value." ;
             sh:minCount 1 ;
             sh:name "skos:prefLabel" ;
-            sh:path skos:prefLabel ;
-            schema:description "The preferred label of the method." ;
-            schema:name "skos:prefLabel" ],
+            sh:path skos:prefLabel ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method purpose" ;
             sh:datatype xsd:string ;
             sh:description "The purpose of the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `tern:purpose` predicate with a string value." ;
             sh:name "tern:purpose" ;
-            sh:path tern:purpose ;
-            schema:description "The purpose of the method." ;
-            schema:name "tern:purpose" ],
+            sh:path tern:purpose ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method equipment" ;
             sh:class skos:Concept ;
             sh:description "The equipment used for the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `tern:equipment` predicate with a value of type `skos:Concept`." ;
             sh:name "tern:equipment" ;
-            sh:path tern:equipment ;
-            schema:description "The equipment used for the method." ;
-            schema:name "tern:equipment" ],
+            sh:path tern:equipment ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method definition" ;
             sh:datatype xsd:string ;
             sh:description "The definition of the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `skos:definition` predicate with a string value." ;
             sh:name "skos:definition" ;
-            sh:path skos:definition ;
-            schema:description "The definition of the method." ;
-            schema:name "skos:definition" ],
+            sh:path skos:definition ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method required duration" ;
             sh:datatype xsd:string ;
             sh:description "The time required for the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `schema:timeRequired` predicate with a string value." ;
             sh:name "schema:timeRequired" ;
-            sh:path <http://schema.org/timeRequired> ;
-            schema:description "The time required for the method." ;
-            schema:name "schema:timeRequired" ],
+            sh:path <http://schema.org/timeRequired> ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
-            skos:prefLabel "method source" ;
+            skos:prefLabel "digital camera preferred label" ;
             sh:description "The source of the method." ;
             sh:message "If present, `dcterms:source` predicates on a `tern:Method` _MUST_ have string or URI values." ;
             sh:name "dcterms:source" ;
             sh:or ( [ sh:datatype xsd:string ] [ sh:datatype xsd:anyURI ] ) ;
-            sh:path dcterms:source ;
-            schema:description "The source of the method." ;
-            schema:name "dcterms:source" ],
+            sh:path dcterms:source ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "note of method" ;
             sh:datatype xsd:string ;
             sh:description "Notes about the method." ;
             sh:message "If present, `skos:note` predicates on a `tern:Method` _MUST_ have string values." ;
             sh:name "skos:note" ;
-            sh:path skos:note ;
-            schema:description "Notes about the method." ;
-            schema:name "skos:note" ],
+            sh:path skos:note ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "categorial collection of method" ;
             sh:class skos:Collection ;
             sh:description "The categorical collection of the method." ;
             sh:message "If present, `tern:hasCategoricalCollection` predicates on a `tern:Method` _MUST_ have values of type `skos:Collection`." ;
             sh:name "tern:hasCategoricalCollection" ;
-            sh:path tern:hasCategoricalCollection ;
-            schema:description "The categorical collection of the method." ;
-            schema:name "tern:hasCategoricalCollection" ],
+            sh:path tern:hasCategoricalCollection ],
         [ a sh:PropertyShape ;
             reg:status reg:statusStable ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method instructions" ;
             sh:class rdf:Seq ;
             sh:description "The instructions for the method." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Method` _MAY_ have at most 1 `tern:instructions` predicate with a value of type `rdf:Seq`." ;
             sh:name "tern:instructions" ;
-            sh:path tern:instructions ;
-            schema:description "The instructions for the method." ;
-            schema:name "tern:instructions" ],
+            sh:path tern:instructions ],
         tern-shapes:tern-undertakenAfter,
         tern-shapes:tern-undertakenBefore,
         tern-shapes:tern-undertakenComplementarily,
@@ -738,7 +633,6 @@ tern-shapes:ObservableProperty a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "value of observable property" ;
             sh:class tern:Parameter ;
             sh:description "The parameter value of the observable property." ;
@@ -746,24 +640,18 @@ tern-shapes:ObservableProperty a sh:NodeShape ;
             sh:message "A `tern:ObservableProperty` _MUST_ have exactly 1 `rdf:value` predicate with a value of type `tern:Parameter`." ;
             sh:minCount 1 ;
             sh:name "rdf:value" ;
-            sh:path rdf:value ;
-            schema:description "The parameter value of the observable property." ;
-            schema:name "rdf:value" ],
+            sh:path rdf:value ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "local value of observable property" ;
             sh:class skos:Concept ;
             sh:description "The local value of the observable property." ;
             sh:maxCount 1 ;
             sh:message "A `tern:ObservableProperty` _MAY_ have at most 1 `tern:localValue` predicate with a value of type `skos:Concept`." ;
             sh:name "tern:localValue" ;
-            sh:path tern:localValue ;
-            schema:description "The local value of the observable property." ;
-            schema:name "tern:localValue" ],
+            sh:path tern:localValue ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "vocabulary of observable property" ;
             sh:description "The vocabulary of the observable property." ;
             sh:maxCount 1 ;
@@ -771,21 +659,16 @@ tern-shapes:ObservableProperty a sh:NodeShape ;
             sh:minCount 1 ;
             sh:name "tern:vocabulary" ;
             sh:or ( [ sh:class skos:ConceptScheme ] [ sh:class skos:Collection ] [ sh:class owl:Ontology ] ) ;
-            sh:path tern:vocabulary ;
-            schema:description "The vocabulary of the observable property." ;
-            schema:name "tern:vocabulary" ],
+            sh:path tern:vocabulary ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "local vocabulary of observable property" ;
             sh:description "The local vocabulary of the observable property." ;
             sh:maxCount 1 ;
             sh:message "A `tern:ObservableProperty` _MAY_ have at most 1 `tern:localVocabulary` predicate with a value of type `skos:ConceptScheme`, `skos:Collection`, or `owl:Ontology`." ;
             sh:name "tern:localVocabulary" ;
             sh:or ( [ sh:class skos:ConceptScheme ] [ sh:class skos:Collection ] [ sh:class owl:Ontology ] ) ;
-            sh:path tern:localVocabulary ;
-            schema:description "The local vocabulary of the observable property." ;
-            schema:name "tern:localVocabulary" ] ;
+            sh:path tern:localVocabulary ] ;
     sh:targetClass tern:ObservableProperty ;
     schema:description "Node shape that targets instances of tern:ObservableProperty and groups the property shapes associated with that class." ;
     schema:name "Observable Property" .
@@ -854,42 +737,32 @@ tern-shapes:Procedure a sh:NodeShape ;
     rdfs:isDefinedBy tern-shapes: ;
     sh:property [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "procedure has input" ;
             sh:class tern:Input ;
             sh:description "The input of the procedure." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Procedure` _MAY_ have at most 1 `ssn:hasInput` predicate with a value of type `tern:Input`." ;
             sh:name "ssn:hasInput" ;
-            sh:path ssn:hasInput ;
-            schema:description "The input of the procedure." ;
-            schema:name "ssn:hasInput" ],
+            sh:path ssn:hasInput ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "method of procedure" ;
             sh:class tern:Method ;
             sh:description "The method type of the procedure." ;
             sh:message "If present, `tern:hasMethod` predicates on a `tern:Procedure` _MUST_ have values of type `tern:Method`." ;
             sh:name "tern:hasMethod" ;
-            sh:path tern:hasMethod ;
-            schema:description "The method type of the procedure." ;
-            schema:name "tern:hasMethod" ],
+            sh:path tern:hasMethod ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "vocabulary of procedure" ;
             sh:description "The vocabulary of the procedure." ;
             sh:maxCount 1 ;
             sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:vocabulary` predicate." ;
             sh:minCount 1 ;
             sh:name "tern:vocabulary" ;
-            sh:path tern:vocabulary ;
-            schema:description "The vocabulary of the procedure." ;
-            schema:name "tern:vocabulary" ],
+            sh:path tern:vocabulary ],
         [ a sh:PropertyShape ;
             reg:status reg:statusExperimental ;
-            rdfs:isDefinedBy tern-shapes: ;
             skos:prefLabel "value of procedure" ;
             sh:class tern:Method ;
             sh:description "The method value of the procedure." ;
@@ -897,9 +770,7 @@ tern-shapes:Procedure a sh:NodeShape ;
             sh:message "A `tern:Procedure` _MUST_ have exactly 1 `rdf:value` predicate with a value of type `tern:Method`." ;
             sh:minCount 1 ;
             sh:name "rdf:value" ;
-            sh:path rdf:value ;
-            schema:description "The method value of the procedure." ;
-            schema:name "rdf:value" ],
+            sh:path rdf:value ],
         tern-shapes:void-inDataset ;
     sh:targetClass tern:Procedure ;
     schema:description "Node shape that targets instances of tern:Procedure and groups the property shapes associated with that class." ;
@@ -3707,9 +3578,7 @@ tern-shapes:void-inDataset a sh:PropertyShape ;
 
 tern-shapes: a owl:Ontology ;
     rdfs:label "TERN Ontology Shapes" ;
-    schema:name "TERN Ontology Shapes" ;
     rdfs:comment "SHACL Shapes for the TERN Ontology. The version number of this SHACL file is kept in sync with the main TERN Ontology" ;
-    schema:description "SHACL Shapes for the TERN Ontology. The version number of this SHACL file is kept in sync with the main TERN Ontology" ;    
     owl:imports <http://datashapes.org/dash>,
         <http://www.opengis.net/ont/geosparql>,
         <http://www.w3.org/2004/02/skos/core>,
@@ -3717,11 +3586,14 @@ tern-shapes: a owl:Ontology ;
         tern: ;
     owl:versionIRI tern-shapes:0.8.0 ;
     owl:versionInfo "0.8.0" ;
-    skos:historyNote "2026-05-28: BDR-maintained version updated for ValPub conformance. Non-structural metadata added, including rdfs:isDefinedBy, schema:hasPart, schema:name and schema:description. No validation constraints were intentionally changed." ;
     schema:codeRepository "https://github.com/ternaustralia/ontology_tern"^^xsd:anyURI ;
+    skos:historyNote "2026-05-28: BDR-maintained version updated for ValPub conformance. Non-structural metadata added, including rdfs:isDefinedBy, schema:hasPart, schema:name and schema:description. No validation constraints were intentionally changed." ;
+    schema:dateModified "2026-05-28"^^xsd:date ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
-    schema:dateModified "2026-06-02"^^xsd:date ;
-    schema:hasPart tern-shapes:Association,
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:maintainer <https://linked.data.gov.au/org/dcceew> ;
+    schema:hasPart 
+        tern-shapes:Association,
         tern-shapes:Association-agent,
         tern-shapes:Association-hadPlan,
         tern-shapes:Association-hadRole,
@@ -3975,7 +3847,5 @@ tern-shapes: a owl:Ontology ;
         <urn:shape:sdo-spatial-min-1>,
         <urn:shape:transectEndPoint-min-1>,
         <urn:shape:transectStartPoint-min-1> ;
-    schema:maintainer <https://linked.data.gov.au/org/dcceew> ;
-    schema:name "TERN Ontology Shapes" ;
-    schema:publisher <https://linked.data.gov.au/org/dcceew> .
+    schema:name "TERN Ontology Shapes" .
 
