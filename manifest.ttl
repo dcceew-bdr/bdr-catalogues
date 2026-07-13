@@ -36,7 +36,7 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
-            dcterms:conformsTo "resources/validators/abis/items/shacl.ttl" ;
+            dcterms:conformsTo "resources/validators/abis/items/shacl-shacl.ttl" ;
             prof:hasArtifact
                 # "resources/validators/abis/items/*.ttl" ;
                 "resources/validators/bdr/items/*.ttl" ;
@@ -51,8 +51,21 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
         ] ,
         [
+            prof:hasArtifact "resources/vocabularies/bdr/catalogue.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
+        ] ,
+        [
             prof:hasArtifact "resources/vocabularies/tern/catalogue.ttl" ;
             prof:hasRole <https://prez.dev/ManifestResourceRoles/CatalogueData> ;
+        ] ,
+        [
+            prof:hasArtifact "resources/vocabularies/bdr/labels.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels> ;
+        ] ,
+        [
+            dcterms:conformsTo "resources/validators/abis/items/vocpub.ttl" ;
+            prof:hasArtifact "resources/vocabularies/bdr/items/*.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
             prof:hasArtifact "resources/vocabularies/tern/items/*.ttl" ;

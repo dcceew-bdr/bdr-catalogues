@@ -2,9 +2,9 @@
 :table-stripes: even
 :sectnums:
 
-This document contains some of the static (file-based) content for the https://www.dcceew.gov.au/environment/environment-information-australia/biodiversity-data-repository[Biodiversity Data Repository], as seen online at https://resources.bdr.gov.au/catalogues in the Datasets, Models & Validators catalogues.
+This document contains static (file-based) content for the https://www.dcceew.gov.au/environment/environment-information-australia/biodiversity-data-repository[Biodiversity Data Repository], as seen online at https://resources.bdr.gov.au/catalogues in the Datasets, Models, Validators & Vocabularies catalogues.
 
-It does not contain the dynamic data of the BDR Datasets catalogue itself nor does it contain the Vocabularies catalogue information which is stored in https://github.com/dcceew-bdr/bdr-vocabs.
+It does not contain the dynamic data of the BDR Datasets catalogue itself. Static BDR vocabulary catalogue content is mirrored under `resources/vocabularies/bdr`.
 
 == Catalogue Data
 

@@ -1,0 +1,55 @@
+PREFIX : <https://linked.data.gov.au/dataset/bdr/datatypes/>
+PREFIX cs: <https://linked.data.gov.au/dataset/bdr/datatypes>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX orgs: <https://linked.data.gov.au/dataset/bdr/orgs/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:WamNumber
+    a skos:Concept ;
+    a rdfs:Datatype ;
+    skos:definition "Western Australian Museum Number - a catalogue number issued by the WA Museum"@en ;
+    skos:historyNote "Defined by BDR admin as real datatype expected in data from WA but also as an example" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "WAM Number"@en ;
+    skos:topConceptOf cs: ;
+    dcat:contactPoint <https://linked.data.gov.au/org/wam> ;
+.
+
+:MERITProjectID
+    a skos:Concept ;
+    a rdfs:Datatype ;
+    skos:definition "String literal type that represents the unique identifier for a Project in MERIT."@en ;
+    skos:historyNote "Defined by TERN Australia for use the BDR." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MERITProjectID"@en ;
+    skos:topConceptOf cs: ;
+    dcat:contactPoint <https://linked.data.gov.au/org/tern> ;
+.
+
+:MERITCreatorID
+    a skos:Concept ;
+    a rdfs:Datatype ;
+    skos:definition "String literal type that represents the unique identifier for Person in the Creator role of a MERIT submission to the BDR."@en ;
+    skos:historyNote "Defined by TERN Australia for use the BDR." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MERITCreatorID"@en ;
+    skos:topConceptOf cs: ;
+    dcat:contactPoint <https://linked.data.gov.au/org/tern> ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    skos:definition "Literal datatypes defined for use within the Biodiversity Data Repository"@en ;
+    skos:hasTopConcept :WamNumber ;
+    skos:historyNote "This vocabulary was developed for the Biodiversity Data Repository and is live in that it grows with new data submissions that use define new datatypes" ;
+    skos:prefLabel "BDR Datatypes"@en ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2024-07-09"^^xsd:date ;
+    schema:dateModified "2024-12-04"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+.

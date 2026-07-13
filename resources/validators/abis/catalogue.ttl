@@ -15,9 +15,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/abis/validator> ,
         <https://linked.data.gov.au/def/ontpub/validator> ,
         <https://linked.data.gov.au/def/sosa-validator> ,
-        <https://linked.data.gov.au/def/vocpub/validator> ;
+        <https://linked.data.gov.au/def/vocpub/validator> ,
         <http://www.opengis.net/def/geosparql/validator> ,
-        <http://www.w3.org/ns/shacl-shacl#> ,
+        <http://www.w3.org/ns/shacl-shacl#> ;
         # <https://w3id.org/tern/shapes/tern/> ,
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "ABIS Validators Catalogue" ;
