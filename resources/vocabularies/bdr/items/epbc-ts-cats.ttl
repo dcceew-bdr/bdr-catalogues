@@ -16,6 +16,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :conservation-dependent
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition "A native species is eligible to be included in the conservation dependent category at a particular time if, at that time, the species is the focus of a specific conservation program, the cessation of which would result in the species becoming vulnerable, endangered or critically endangered within a period of 5 years."@en ;
     skos:prefLabel "conservation dependent"@en ;
     skos:topConceptOf cs: ;
@@ -24,6 +25,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :critically-endangered
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition "A native species is eligible to be included in the critically endangered category at a particular time if, at that time, it is facing an extremely high risk of extinction in the wild in the immediate future, as determined in accordance with the prescribed criteria."@en ;
     skos:scopeNote "This category is mutually exclusive with the endangered category. A species assessed as critically endangered cannot simultaneously be assessed as endangered."@en ;
     skos:prefLabel "critically endangered"@en ;
@@ -33,6 +35,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :endangered
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition """A native species is eligible to be included in the endangered category at a particular time if, at that time:
 
  (a) it is not critically endangered; and
@@ -46,6 +49,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :extinct
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition "A native species is eligible to be included in the extinct category at a particular time if, at that time, there is no reasonable doubt that the last member of the species has died."@en ;
     skos:prefLabel "extinct"@en ;
     skos:topConceptOf cs: ;
@@ -54,6 +58,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :extinct-in-the-wild
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition """A native species is eligible to be included in the extinct in the wild category at a particular time if, at that time:
 
  (a) it is known only to survive in cultivation, in captivity or as a naturalised population well outside its past range; or
@@ -67,6 +72,7 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 :vulnerable
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:definition """A native species is eligible to be included in the vulnerable category at a particular time if, at that time:
 
  (a) it is not critically endangered or endangered; and
@@ -78,6 +84,13 @@ schema:url "http://dcceew.gov.au"^^xsd:anyURI
 
 cs:
     a skos:ConceptScheme ;
+    skos:hasTopConcept
+        :conservation-dependent ,
+        :critically-endangered ,
+        :endangered ,
+        :extinct ,
+        :extinct-in-the-wild ,
+        :vulnerable ;
     skos:definition "The EPBC Threatened Species Categories contains the species categories listed in the Environment Protection and Biodiversity Conservation Act 1999"@en ;
     skos:scopeNote "This vocabulary is based on the threatened species categories defined in the EPBC Act 1999 and broadly aligns with the IUCN Red List Categories and Criteria."@en ;
     rdfs:seeAlso <https://www.iucnredlist.org/resources/categories-and-criteria> ;
@@ -86,9 +99,10 @@ cs:
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     dcterms:source "https://www.legislation.gov.au/C2004A00485"^^xsd:anyURI ;
     schema:dateCreated "2026-05-15"^^xsd:date ;
-    schema:dateModified "2026-05-18"^^xsd:date ;
+    schema:dateModified "2026-07-14"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
     schema:status status:stable ;
     schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/"^^xsd:anyURI ;
+    schema:version "1" ;
 .

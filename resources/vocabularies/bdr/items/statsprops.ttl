@@ -1,5 +1,6 @@
 PREFIX : <https://linked.data.gov.au/dataset/bdr/statsprops/>
 PREFIX cs: <https://linked.data.gov.au/dataset/bdr/statsprops>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -16,6 +17,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
+:BiodiversityRecordsCount rdfs:isDefinedBy cs: .
+:DataStatistic rdfs:isDefinedBy cs: .
+:DatasetsCount rdfs:isDefinedBy cs: .
+:ObservationsCount rdfs:isDefinedBy cs: .
+:OccurrencesCount rdfs:isDefinedBy cs: .
+:SamplesCount rdfs:isDefinedBy cs: .
+:SamplingsCount rdfs:isDefinedBy cs: .
+:SiteCount rdfs:isDefinedBy cs: .
+:SiteVisitCount rdfs:isDefinedBy cs: .
+:SubmissionCount rdfs:isDefinedBy cs: .
+:SurveyCount rdfs:isDefinedBy cs: .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
 :ObservationsCount
     a skos:Concept , sosa:ObservableProperty ;
     skos:definition "The number of ABIS Observation class instances within a given scope"@en ;
@@ -115,7 +133,8 @@ cs:
     skos:prefLabel "BDR Statistical Properties"@en ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2024-07-10"^^xsd:date ;
-    schema:dateModified "2024-07-10"^^xsd:date ;
+    schema:dateModified "2026-07-09"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:version "1" ;
 .
