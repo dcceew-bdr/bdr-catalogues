@@ -1,0 +1,58 @@
+PREFIX apni: <https://id.biodiversity.org.au/name/apni/>
+PREFIX bdr-cat: <https://linked.data.gov.au/dataset/bdr/catalogues/>
+PREFIX d: <https://linked.data.gov.au/dataset/wons>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX status: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+d:
+    a schema:Dataset ;
+    rdfs:member
+        apni:100521 ,
+        apni:101259 ,
+        apni:108846 ,
+        apni:115330 ,
+        apni:116244 ,
+        apni:116436 ,
+        apni:116682 ,
+        apni:119305 ,
+        apni:134846 ,
+        apni:164929 ,
+        apni:171296 ,
+        apni:173623 ,
+        apni:194694 ,
+        apni:214158 ,
+        apni:238650 ,
+        apni:54839 ,
+        apni:55057 ,
+        apni:55079 ,
+        apni:59669 ,
+        apni:60722 ,
+        apni:62625 ,
+        apni:63783 ,
+        apni:65315 ,
+        apni:66041 ,
+        apni:66092 ,
+        apni:67853 ,
+        apni:67864 ,
+        apni:79993 ,
+        apni:80023 ,
+        apni:84286 ,
+        apni:85694 ,
+        apni:86777 ,
+        apni:88828 ,
+        apni:89390 ,
+        apni:94061 ,
+        apni:98714 ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/tree/main/source/datasets/ref/wons"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2026-05-15"^^xsd:date ;
+    schema:dateModified "2026-07-14"^^xsd:date ;
+    schema:description "Weeds of National Significance" ;
+    schema:isPartOf bdr-cat:ref-datasets ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Weeds of National Significance" ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:status status:stable ;
+.
