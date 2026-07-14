@@ -1,5 +1,6 @@
 PREFIX : <https://linked.data.gov.au/dataset/bdr/statsprops/>
 PREFIX cs: <https://linked.data.gov.au/dataset/bdr/statsprops>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -14,6 +15,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Data Statistic"@en ;
     skos:topConceptOf cs: ;
+.
+
+:BiodiversityRecordsCount rdfs:isDefinedBy cs: .
+:DataStatistic rdfs:isDefinedBy cs: .
+:DatasetsCount rdfs:isDefinedBy cs: .
+:ObservationsCount rdfs:isDefinedBy cs: .
+:OccurrencesCount rdfs:isDefinedBy cs: .
+:SamplesCount rdfs:isDefinedBy cs: .
+:SamplingsCount rdfs:isDefinedBy cs: .
+:SiteCount rdfs:isDefinedBy cs: .
+:SiteVisitCount rdfs:isDefinedBy cs: .
+:SubmissionCount rdfs:isDefinedBy cs: .
+:SurveyCount rdfs:isDefinedBy cs: .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
 .
 :ObservationsCount
     a skos:Concept , sosa:ObservableProperty ;

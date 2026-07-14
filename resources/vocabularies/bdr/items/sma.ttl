@@ -1,5 +1,6 @@
 PREFIX : <https://linked.data.gov.au/dataset/bdr/sma/>
 PREFIX cs: <https://linked.data.gov.au/dataset/bdr/sma>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX status: <https://def.isotc211.org/codeset/ItemStatus/>
@@ -14,6 +15,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Insert"@en ;
     skos:topConceptOf cs: ;
+.
+
+:Annotate rdfs:isDefinedBy cs: .
+:Attach rdfs:isDefinedBy cs: .
+:Check rdfs:isDefinedBy cs: .
+:Insert rdfs:isDefinedBy cs: .
+:Remove rdfs:isDefinedBy cs: .
+:Replace rdfs:isDefinedBy cs: .
+:Update rdfs:isDefinedBy cs: .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
 .
 :Update
     a skos:Concept ;

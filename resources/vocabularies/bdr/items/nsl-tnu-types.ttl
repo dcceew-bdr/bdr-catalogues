@@ -1,5 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/nsl/tnu-types/>
 PREFIX cs: <https://linked.data.gov.au/def/nsl/tnu-types>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX status: <https://def.isotc211.org/codeset/ItemStatus/>
@@ -12,6 +13,42 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Valid Name"@en ;
     skos:topConceptOf cs: ;
+.
+
+:alternative-name rdfs:isDefinedBy cs: .
+:autonym rdfs:isDefinedBy cs: .
+:basionym rdfs:isDefinedBy cs: .
+:comb-et-stat-nov rdfs:isDefinedBy cs: .
+:comb-nov rdfs:isDefinedBy cs: .
+:doubtful-nomenclatural-synonym rdfs:isDefinedBy cs: .
+:doubtful-pro-parte-taxonomic-synonym rdfs:isDefinedBy cs: .
+:doubtful-taxonomic-synonym rdfs:isDefinedBy cs: .
+:explicit-autonym rdfs:isDefinedBy cs: .
+:heterotypic-synonym rdfs:isDefinedBy cs: .
+:homotypic-synonym rdfs:isDefinedBy cs: .
+:implicit-autonym rdfs:isDefinedBy cs: .
+:isonym rdfs:isDefinedBy cs: .
+:nom-et-stat-nov rdfs:isDefinedBy cs: .
+:nom-nov rdfs:isDefinedBy cs: .
+:nomenclatural-synonym rdfs:isDefinedBy cs: .
+:orthographic-variant rdfs:isDefinedBy cs: .
+:primary-reference rdfs:isDefinedBy cs: .
+:primary-synonym rdfs:isDefinedBy cs: .
+:pro-parte-nomenclatural-synonym rdfs:isDefinedBy cs: .
+:pro-parte-taxonomic-synonym rdfs:isDefinedBy cs: .
+:replaced-synonym rdfs:isDefinedBy cs: .
+:replacement-name rdfs:isDefinedBy cs: .
+:secondary-reference rdfs:isDefinedBy cs: .
+:stat-nov rdfs:isDefinedBy cs: .
+:synonym rdfs:isDefinedBy cs: .
+:tax-nov rdfs:isDefinedBy cs: .
+:taxonomic-synonym rdfs:isDefinedBy cs: .
+:valid-name rdfs:isDefinedBy cs: .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
 .
 
 :alternative-name

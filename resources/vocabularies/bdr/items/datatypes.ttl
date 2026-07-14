@@ -18,6 +18,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
     dcat:contactPoint <https://linked.data.gov.au/org/wam> ;
 .
+
+:MERITCreatorID rdfs:isDefinedBy cs: .
+:MERITProjectID rdfs:isDefinedBy cs: .
+:WamNumber rdfs:isDefinedBy cs: .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
 :MERITProjectID
     a skos:Concept ;
     a rdfs:Datatype ;
