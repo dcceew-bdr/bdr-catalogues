@@ -44,6 +44,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
 .
 
+<https://linked.data.gov.au/org/dcceew-meri>
+    a
+        skos:Concept ,
+        schema:Organization ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader <https://linked.data.gov.au/org/dcceew> ;
+    skos:definition """A unit of DCCEEW that called Monitoring, Evaluation, Reporting and Improvement (MERI) that:
+* drives good project design
+* provides critical evidence and insights to support ongoing improvement
+* helps to explain change over time in priority assets where natural resource management (NRM) activities have occurred
+* shows change over time across medium-term and long-term outcomes.""" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Monitoring, Evaluation, Reporting and Improvement (MERI)"@en ;
+    skos:topConceptOf cs: ;
+    schema:description """A unit of DCCEEW that called Monitoring, Evaluation, Reporting and Improvement (MERI) that:
+* drives good project design
+* provides critical evidence and insights to support ongoing improvement
+* helps to explain change over time in priority assets where natural resource management (NRM) activities have occurred
+* shows change over time across medium-term and long-term outcomes.""" ;
+    schema:name "Monitoring, Evaluation, Reporting and Improvement (MERI)" ;
+    schema:url "https://www.dcceew.gov.au/environment/land/natural-heritage-trust/monitoring-reporting/meri"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/tas-nre>
     a
         skos:Concept ,
@@ -58,6 +81,7 @@ We deliver a sustainable Tasmania by protecting and enhancing Tasmania's cultura
     schema:name "Department of Natural Resources and Environment Tasmania" ;
     schema:url "https://www.nre.tas.gov.au"^^xsd:anyURI ;
 .
+
 <https://linked.data.gov.au/org/tas-nva>
     a
         skos:Concept ,
@@ -97,12 +121,12 @@ ror:030c92375
         skos:Concept ,
         schema:Organization ;
     rdfs:isDefinedBy cs: ;
+    skos:definition "The company KurrawongAI"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "KurrawongAI"@en ;
     skos:topConceptOf cs: ;
     schema:name "KurrawongAI" ;
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
-    skos:definition "The company KurrawongAI"@en ;
 .
 
 <https://linked.data.gov.au/org/act>
