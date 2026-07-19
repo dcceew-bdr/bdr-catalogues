@@ -20,7 +20,7 @@
 
 shsh:
     a owl:Ontology ;
-	rdfs:label "SHACL for SHACL (2017 draft, local adaptation)"@en ;
+	rdfs:label "SHACL for SHACL"@en ;
 	rdfs:comment "Local adaptation of the 2017 SHACL-SHACL draft. This shapes graph checks a subset of the SHACL 1.0 Core syntax rules; it is neither a complete SHACL syntax checker nor a SHACL 1.2 validator."@en ;
 	dcterms:source "https://github.com/w3c/data-shapes/blob/gh-pages/shacl/shacl-shacl.ttl"^^xsd:anyURI ;
 	owl:versionIRI shsh:2017-draft-bdr-1 ;
@@ -59,8 +59,11 @@ shsh:
 
 shsh:ListShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
 	rdfs:label "List shape"@en ;
 	rdfs:comment "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL."@en ;
+	schema:name "Well-formed RDF list"@en ;
+	schema:description "Validates the structure of an RDF list used by a SHACL shapes graph, without checking non-recursion."@en ;
 	rdfs:seeAlso <https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list> ;
 	sh:property [
 		sh:path [ sh:zeroOrMorePath rdf:rest ] ;
@@ -71,8 +74,11 @@ shsh:ListShape
 
 shsh:ListNodeShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
 	rdfs:label "List node shape"@en ;
 	rdfs:comment "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion."@en ;
+	schema:name "Well-formed RDF list node"@en ;
+	schema:description "Validates an individual node within a well-formed RDF list, without recursively validating its rdf:rest value."@en ;
 	sh:or ( [
 				sh:hasValue rdf:nil ;
         		sh:property [
@@ -100,8 +106,11 @@ shsh:ListNodeShape
 
 shsh:ShapeShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
 	rdfs:label "Shape shape"@en ;
 	rdfs:comment "A shape that can be used to validate syntax rules for other shapes."@en ;
+	schema:name "SHACL shape syntax"@en ;
+	schema:description "Validates common SHACL syntax rules that apply to node shapes and property shapes."@en ;
 
 	# See https://www.w3.org/TR/shacl/#shapes for what counts as a shape
 	sh:targetClass sh:NodeShape ;
@@ -307,6 +316,9 @@ shsh:ShapeShape
 
 shsh:NodeShapeShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "Node shape syntax"@en ;
+	schema:description "Validates SHACL syntax rules specific to node shapes, including constraints that are only permitted on property shapes."@en ;
 	sh:targetObjectsOf sh:node ;        # node-node
 	sh:property [
 		sh:path sh:path ;
@@ -339,6 +351,9 @@ shsh:NodeShapeShape
 
 shsh:PropertyShapeShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "Property shape syntax"@en ;
+	schema:description "Validates SHACL syntax rules specific to property shapes, including the requirement for exactly one well-formed path."@en ;
 	sh:targetObjectsOf sh:property ;    # property-node
 	sh:property [
 		sh:path sh:path ;
@@ -350,6 +365,9 @@ shsh:PropertyShapeShape
 # Values of sh:and, sh:or and sh:xone must be lists of shapes
 shsh:ShapesListShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "Logical constraint shape list"@en ;
+	schema:description "Validates that the members of lists used by sh:and, sh:or and sh:xone are SHACL shapes."@en ;
 	sh:targetObjectsOf sh:and ;         # and-members-node
 	sh:targetObjectsOf sh:or ;          # or-members-node
 	sh:targetObjectsOf sh:xone ;        # xone-members-node
@@ -372,8 +390,11 @@ _:PathPath
 
 shsh:PathShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
 	rdfs:label "Path shape"@en ;
 	rdfs:comment "A shape that can be used to validate the syntax rules of well-formed SHACL paths."@en ;
+	schema:name "Well-formed SHACL path"@en ;
+	schema:description "Validates the syntax rules of a well-formed SHACL property path."@en ;
 	rdfs:seeAlso <https://www.w3.org/TR/shacl/#property-paths> ;
 	sh:property [
 		sh:path [ sh:zeroOrMorePath _:PathPath ] ;
@@ -431,6 +452,9 @@ shsh:PathNodeShape
 
 shsh:PathListWithAtLeast2Members
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "SHACL path list with at least two members"@en ;
+	schema:description "Validates that a sequence or alternative SHACL path is a well-formed RDF list containing at least two members."@en ;
 	sh:node shsh:ListShape ;
 	sh:property [
 		sh:path [ sh:oneOrMorePath rdf:rest ] ;
@@ -439,10 +463,16 @@ shsh:PathListWithAtLeast2Members
 
 shsh:ShapesGraphShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "Shapes graph reference"@en ;
+	schema:description "Validates that every value of sh:shapesGraph is an IRI."@en ;
 	sh:targetObjectsOf sh:shapesGraph ;
 	sh:nodeKind sh:IRI .                # shapesGraph-nodeKind
 
 shsh:EntailmentShape
 	a sh:NodeShape ;
+	rdfs:isDefinedBy shsh: ;
+	schema:name "Entailment regime reference"@en ;
+	schema:description "Validates that every value of sh:entailment is an IRI."@en ;
 	sh:targetObjectsOf sh:entailment ;
 	sh:nodeKind sh:IRI .                # entailment-nodeKind
