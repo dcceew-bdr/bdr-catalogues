@@ -1,10 +1,16 @@
 # baseURI: http://www.w3.org/ns/shacl-shacl#
 
-# A SHACL shapes graph to validate SHACL shapes graphs
-# Draft last edited 2017-04-04
+# Local adaptation of the 2017 SHACL-SHACL draft.
+#
+# This graph checks a subset of the SHACL 1.0 Core syntax rules. It is not the
+# SHACL 1.2 Core validator or the SHACL 1.2 union validator. The latter remain
+# under development in https://github.com/w3c/shacl-resources/tree/main/shacl-shacl/.
+# Upstream draft last edited 2017-04-04.
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix schema: <https://schema.org/> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
@@ -14,14 +20,41 @@
 
 shsh:
     a owl:Ontology ;
-	rdfs:label "SHACL for SHACL"@en ;
-	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
+	rdfs:label "SHACL for SHACL (2017 draft, local adaptation)"@en ;
+	rdfs:comment "Local adaptation of the 2017 SHACL-SHACL draft. This shapes graph checks a subset of the SHACL 1.0 Core syntax rules; it is neither a complete SHACL syntax checker nor a SHACL 1.2 validator."@en ;
+	dcterms:source "https://github.com/w3c/data-shapes/blob/gh-pages/shacl/shacl-shacl.ttl"^^xsd:anyURI ;
+	owl:versionIRI shsh:2017-draft-bdr-1 ;
+	owl:versionInfo "2017 SHACL-SHACL draft, BDR local adaptation 1" ;
 	schema:codeRepository "https://github.com/w3c/data-shapes/"^^xsd:anyURI ;
-	schema:dateModified "2026-04-07"^^xsd:date ;
+	schema:copyrightHolder <https://www.w3.org/> ;
+	schema:copyrightNotice "Copyright © 2017 World Wide Web Consortium. Local metadata adaptation © 2026 Department of Climate Change, Energy, the Environment and Water." ;
+	schema:copyrightYear "2017"^^xsd:gYear ;
+	schema:creator <https://www.w3.org/> ;
+	schema:dateCreated "2017-04-04"^^xsd:date ;
+	schema:dateIssued "2025-10-08"^^xsd:date ;
+	schema:dateModified "2026-07-19"^^xsd:date ;
+	schema:description "A local adaptation of the 2017 SHACL-SHACL draft that checks a subset of the SHACL 1.0 Core syntax rules." ;
+	schema:license <https://www.w3.org/copyright/software-license/> ;
+	schema:name "SHACL for SHACL (2017 draft, local adaptation)" ;
+	schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+	schema:version "1" ;
+	prov:wasDerivedFrom <http://www.w3.org/ns/shacl-shacl#> ;
 	sh:declare [
 		sh:prefix "shsh" ;
 		sh:namespace "http://www.w3.org/ns/shacl-shacl#" ;
 	] .
+
+<https://www.w3.org/>
+	a schema:Organization ;
+	schema:name "World Wide Web Consortium" ;
+	schema:url "https://www.w3.org/"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+	a schema:Organization ;
+	schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+	schema:url "https://www.dcceew.gov.au/"^^xsd:anyURI ;
+.
 
 
 shsh:ListShape

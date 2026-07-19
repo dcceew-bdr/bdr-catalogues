@@ -1,0 +1,9 @@
+PREFIX ex: <https://example.com/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# A property shape must have exactly one value for sh:path.
+ex:InvalidPropertyShape
+    a sh:PropertyShape ;
+    sh:path ex:firstPath , ex:secondPath ;
+    sh:minCount 1 ;
+.
