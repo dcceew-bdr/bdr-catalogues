@@ -365,8 +365,8 @@ AusBIGG was established in 2021 and its main role, as of 2023, is the governance
     skos:definition "Australia's national science research agency. Environment Research Unit."@en ;
     skos:identifier "https://ror.org/05bgxxb69"^^id:ror ;
     skos:inScheme cs: ;
-    skos:prefLabel "Environment Research Unit"@en ;
-    schema:name "Environment Research Unit CSIRO" ;
+    skos:prefLabel "CSIRO Environment Research Unit"@en ;
+    schema:name "CSIRO Environment Research Unit" ;
     schema:parentOrganization <https://linked.data.gov.au/org/csiro> ;
     schema:url "https://www.csiro.au/en/about/people/research-units/environment"^^xsd:anyURI ;
 .
