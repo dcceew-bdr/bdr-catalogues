@@ -101,21 +101,6 @@ ror:030c92375
     owl:deprecated true ;
 .
 
-<http://www.publish.csiro.au/>
-    a
-        skos:Concept ,
-        schema:Organization ;
-    rdfs:isDefinedBy cs: ;
-    skos:broader <https://linked.data.gov.au/org/csiro> ;
-    skos:definition "CSIRO Publishing is an Australian science publisher of books, peer-reviewed journals, and news."@en ;
-    skos:exactMatch <https://linked.data.gov.au/org/csiro-publishing> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "CSIRO Publishing"@en ;
-    schema:identifier "https://ror.org/051hpv692"^^id:loc ;
-    schema:name "CSIRO Publishing" ;
-    schema:url "https://www.publish.csiro.au/"^^xsd:anyURI ;
-.
-
 <https://kurrawong.ai>
     a
         skos:Concept ,
@@ -380,8 +365,9 @@ AusBIGG was established in 2021 and its main role, as of 2023, is the governance
     skos:definition "Australia's national science research agency. Environment Research Unit."@en ;
     skos:identifier "https://ror.org/05bgxxb69"^^id:ror ;
     skos:inScheme cs: ;
-    skos:prefLabel "Environment Research Unit"@en ;
-    schema:name "Environment Research Unit CSIRO" ;
+    skos:prefLabel "CSIRO Environment Research Unit"@en ;
+    schema:name "CSIRO Environment Research Unit" ;
+    schema:parentOrganization <https://linked.data.gov.au/org/csiro> ;
     schema:url "https://www.csiro.au/en/about/people/research-units/environment"^^xsd:anyURI ;
 .
 
@@ -1400,6 +1386,22 @@ Today, the Museum has seven public locations across the state - and a Collection
     schema:url "https://www.tern.org.au"^^xsd:anyURI ;
 .
 
+<http://www.publish.csiro.au>
+    a
+        skos:Concept ,
+        schema:Organization ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader <https://linked.data.gov.au/org/csiro> ;
+    skos:definition "CSIRO Publishing is an Australian science publisher of books, peer-reviewed journals, and news."@en ;
+    skos:exactMatch <https://linked.data.gov.au/org/csiro-publishing> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CSIRO Publishing"@en ;
+    schema:identifier "https://ror.org/051hpv692"^^id:loc ;
+    schema:name "CSIRO Publishing" ;
+    schema:parentOrganization <https://linked.data.gov.au/org/csiro> ;
+    schema:url "https://www.publish.csiro.au/"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/tern>
     a
         skos:Concept ,
@@ -1415,21 +1417,6 @@ Today, the Museum has seven public locations across the state - and a Collection
     schema:isPartOf <https://linked.data.gov.au/org/dcceew> ;
     schema:name "Terrestrial Ecosystems Research Network" ;
     schema:url "https://tern.org.au"^^xsd:anyURI ;
-.
-
-<https://linked.data.gov.au/org/csiro>
-    a
-        skos:Concept ,
-        schema:Organization ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "Australia's national science research agency."@en ;
-    skos:inScheme cs: ;
-    skos:narrower <https://linked.data.gov.au/org/csiro-environment> ;
-    skos:notation "41 687 119 230"^^id:ausbn ;
-    skos:prefLabel "CSIRO"@en ;
-    skos:topConceptOf cs: ;
-    schema:name "CSIRO" ;
-    schema:url "https://www.csiro.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/daff>
@@ -1448,6 +1435,23 @@ This is one of the successor Departments to the Department of Agriculture, Water
 This is one of the successor Departments to the Department of Agriculture, Water and the Environment.""" ;
     schema:name "Department of Agriculture, Fisheries and Forestry" ;
     schema:url "https://www.agriculture.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/csiro>
+    a
+        skos:Concept ,
+        schema:Organization ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australia's national science research agency."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        <http://www.publish.csiro.au> ,
+        <https://linked.data.gov.au/org/csiro-environment> ;
+    skos:notation "41 687 119 230"^^id:ausbn ;
+    skos:prefLabel "CSIRO"@en ;
+    skos:topConceptOf cs: ;
+    schema:name "CSIRO" ;
+    schema:url "https://www.csiro.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/dcceew>
@@ -1469,7 +1473,7 @@ cs:
     a skos:ConceptScheme ;
     skos:definition "Organisations known to own & submit data to the Biodiversity Date Repository"@en ;
     skos:hasTopConcept
-        <http://www.publish.csiro.au/> ,
+        <http://www.publish.csiro.au> ,
         <https://kurrawong.ai> ,
         <https://linked.data.gov.au/org/act> ,
         <https://linked.data.gov.au/org/act-atlas> ,
@@ -1574,7 +1578,7 @@ This vocabulary was initially developed for the Biodiversity Data Repository and
     skos:prefLabel "BDR Organisations"@en ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2024-07-09"^^xsd:date ;
-    schema:dateModified "2026-07-09"^^xsd:date ;
+    schema:dateModified "2026-07-20"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
     schema:status status:experimental ;
