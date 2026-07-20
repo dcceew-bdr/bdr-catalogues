@@ -40,6 +40,13 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
         ] ,
         [
+            dcterms:conformsTo "resources/validators/abis/items/validator.shacl.ttl" ;
+            prof:hasArtifact
+                "resources/validators/abis/items/geo.ttl" ,
+                "resources/validators/abis/items/shacl-shacl.ttl" ;
+            prof:hasRole <https://prez.dev/ManifestResourceRoles/ResourceData> ;
+        ] ,
+        [
             dcterms:conformsTo "resources/validators/abis/items/shacl-shacl.ttl" ;
             prof:hasArtifact
                 # "resources/validators/abis/items/*.ttl" ;
