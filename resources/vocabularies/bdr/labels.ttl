@@ -209,3 +209,13 @@ prof:hasRole
 <https://linked.data.gov.au/def/vocpub>
     schema:name "VocPub Profile of SKOS" ;
 .
+
+<https://linked.data.gov.au/def/abis/BiodiversityRecord>
+    rdfs:label "Biodiversity Record"@en ;
+    schema:description "Legacy ABIS class; replaced by schema:Statement."@en ;
+.
+
+<https://linked.data.gov.au/def/abis/Project>
+    rdfs:label "Project"@en ;
+    schema:description "Legacy ABIS class; replaced by schema:Project."@en ;
+.
