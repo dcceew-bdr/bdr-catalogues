@@ -1,0 +1,60 @@
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/dataset/bdr/46ae2618-221d-427d-975d-d6e0f336c0b6>
+    a schema:Dataset ;
+    dwc:dataGeneralizations "The location of sightings is specific to an ~ 200 x 40m plot area" ;
+    dwc:informationWithheld "No descriptions of the nature of the data are withheld" ;
+    geo:hasBoundingBox
+        [
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7844> POLYGON ((-35.94215 152.206433, -28.0256667 152.206433, -28.0256667 146.28009, -35.94215 146.28009, -35.94215 152.206433))"^^geo:wktLiteral ;
+        ] ;
+    geo:hasCentroid
+        [
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7844> POINT (-32.76936720208705 149.20769667377152)"^^geo:wktLiteral ;
+        ] ;
+    geo:hasGeometry
+        [
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7844> POLYGON ((-35.94215 149.15901, -35.5357 146.9427, -35.492443 146.82811, -34.6825 146.28228, -34.67866 146.28009, -31.167286 149.064331, -29.05671 150.81932, -28.449707 151.505707, -28.0256667 152.2060667, -28.0263833 152.20625, -28.0271 152.206433, -28.02885 152.2064167, -35.35902 149.48764, -35.94215 149.15901))"^^geo:wktLiteral ;
+        ] ;
+    prov:qualifiedAttribution
+        <https://linked.data.gov.au/dataset/bdr/attribution/csiro-environment/custodian> ,
+        <https://linked.data.gov.au/dataset/bdr/attribution/csiro-environment/resourceProvider> ,
+        <https://linked.data.gov.au/dataset/bdr/attribution/dcceew/rightsHolder> ;
+    schema:dateCreated "2026-02-24"^^xsd:date ;
+    schema:dateModified "2026-02-24"^^xsd:date ;
+    schema:description "Ecological monitoring 12 year dataset from ESP sites on private properties in NSW and Qld Box Gum Grassy Woodlands designed to inform and assess the effectiveness of the ESP management actions in maintaining and improving the the ecological condition of threatened ecological community remnants on these sites." ;
+    schema:license <https://linked.data.gov.au/dataset/bdr/46ae2618-221d-427d-975d-d6e0f336c0b6/licence> ;
+    schema:name "Environmental Stewardship Program 2010-2023 Ecological Monitoring data" ;
+.
+
+<https://linked.data.gov.au/dataset/bdr/submission/727c2ffe-a558-4ccb-a225-d7242fb4acc7>
+    prov:qualifiedAttribution <https://linked.data.gov.au/dataset/bdr/attribution/csiro-environment/resourceProvider> ;
+.
+
+<https://linked.data.gov.au/dataset/bdr/46ae2618-221d-427d-975d-d6e0f336c0b6/licence>
+    a odrl:Policy ;
+    schema:identifier "Services Agreement for Environmental Stewardship Program Ecological Monitoring and Evaluation Services 2017 DCCEEW (Department) and CSIRO (Service Provider); Data-access-rights=DCCEEW hold data access rights; rights for use of data by CSIRO are defined by the Services Agreement"^^<https://linked.data.gov.au/dataset/bdr/datatypes/DataLicenceAgreementReference> ;
+.
+
+<https://linked.data.gov.au/dataset/bdr/attribution/csiro-environment/custodian>
+    a prov:Attribution ;
+    prov:agent <https://linked.data.gov.au/org/csiro-environment> ;
+    prov:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
+.
+
+<https://linked.data.gov.au/dataset/bdr/attribution/dcceew/rightsHolder>
+    a prov:Attribution ;
+    prov:agent <https://linked.data.gov.au/org/dcceew> ;
+    prov:hadRole <https://linked.data.gov.au/def/data-roles/rightsHolder> ;
+.
+
+<https://linked.data.gov.au/dataset/bdr/attribution/csiro-environment/resourceProvider>
+    a prov:Attribution ;
+    prov:agent <https://linked.data.gov.au/org/csiro-environment> ;
+    prov:hadRole <https://linked.data.gov.au/def/data-roles/resourceProvider> ;
+.

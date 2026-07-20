@@ -17,4 +17,5 @@ This is the main catalogue of BDR-specific data.""" ;
     schema:name "Observations Datasets Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
     schema:version "1" ;
+    schema:hasPart <https://linked.data.gov.au/dataset/bdr/46ae2618-221d-427d-975d-d6e0f336c0b6> ;
 .
