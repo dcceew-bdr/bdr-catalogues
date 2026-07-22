@@ -1414,6 +1414,7 @@ Today, the Museum has seven public locations across the state - and a Collection
     skos:inScheme cs: ;
     skos:prefLabel "Terrestrial Ecosystems Research Network"@en ;
     schema:description "Australia’s land ecosystem observatory." ;
+    schema:identifier "https://ror.org/03wxseg04"^^id:ror ;
     schema:isPartOf <https://linked.data.gov.au/org/dcceew> ;
     schema:name "Terrestrial Ecosystems Research Network" ;
     schema:url "https://tern.org.au"^^xsd:anyURI ;
